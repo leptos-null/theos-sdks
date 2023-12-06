@@ -1,0 +1,21 @@
+name: Create SDKs
+
+on: push
+
+jobs:
+  create:
+    runs-on: macos-latest
+
+    steps:
+      - name: Clone tools
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: "tools/"
+
+      - name: Install blacktop/ipsw
+        run: brew install blacktop/tap/ipsw
+
+      - name: Debug
+        run: |
+          ls -alh /Applications/
+          ls -alh /Applications/*.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
