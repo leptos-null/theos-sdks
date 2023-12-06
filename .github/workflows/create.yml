@@ -15,7 +15,37 @@ jobs:
       - name: Install blacktop/ipsw
         run: brew install blacktop/tap/ipsw
 
-      - name: Debug
+      - name: Patch SDK
         run: |
-          ls -alh /Applications/
-          ls -alh /Applications/*.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
+          cd tools/
+          PLATFORM_PATH="$(xcrun --sdk iphoneos --show-sdk-platform-path)"
+          BASE_SDK_PATH="$(xcrun --sdk iphoneos --show-sdk-path)"
+
+          SDK_VERSION="$(plutil -extract "Version" raw -o - "${BASE_SDK_PATH}/SDKSettings.plist")"
+          SDK_OUTPUT_PATH="iPhoneOS${SDK_VERSION}.sdk"
+
+          SYMBOLS_DIR="$(mktemp -d -t symbols)"
+          DSC_DOWNLOAD_DIR="$(mktemp -d -t dsc)"
+          TBD_TOOL_PATH="$(mktemp -t tbd)"
+
+          echo "PLATFORM_PATH = ${PLATFORM_PATH}"
+          echo "BASE_SDK_PATH = ${BASE_SDK_PATH}"
+          echo "SDK_VERSION = ${SDK_VERSION}"
+          echo "SDK_OUTPUT_PATH = ${SDK_OUTPUT_PATH}"
+          echo "SYMBOLS_DIR = ${SYMBOLS_DIR}"
+          echo "DSC_DOWNLOAD_DIR = ${DSC_DOWNLOAD_DIR}"
+          echo "TBD_TOOL_PATH = ${TBD_TOOL_PATH}"
+
+          curl -L "https://github.com/inoahdev/tbd/releases/download/2.2/tbd-mac" -o "${TBD_TOOL_PATH}"
+          chmod 0755 "${TBD_TOOL_PATH}"
+
+          # iPhone14,6 random device that support iOS 15+
+          ipsw download ipsw --dyld --version "${SDK_VERSION}" --device "iPhone14,6"
+
+          DYLD_CACHE_PATH="${DSC_DOWNLOAD_DIR}"/*/"dyld_shared_cache_arm64e"
+          echo "DYLD_CACHE_PATH = ${DYLD_CACHE_PATH}"
+
+          make dsc_extractor_client
+          ./dsc_extractor_client "${PLATFORM_PATH}/usr/lib/dsc_extractor.bundle" "${DYLD_CACHE_PATH}" "${SYMBOLS_DIR}"
+          ./create_patched_sdk.sh "${SYMBOLS_DIR}" "${SDK_OUTPUT_PATH}" "${BASE_SDK_PATH}" "${TBD_TOOL_PATH}"
+          ls -alh "${SDK_OUTPUT_PATH}"
