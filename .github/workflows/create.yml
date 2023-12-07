@@ -2,6 +2,9 @@ name: Create SDKs
 
 on: push
 
+permissions:
+  contents: write
+
 jobs:
   create:
     runs-on: macos-latest
