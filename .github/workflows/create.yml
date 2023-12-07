@@ -17,7 +17,7 @@ jobs:
 
       - name: Patch SDK
         env:
-            GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           cd tools/
           PLATFORM_PATH="$(xcrun --sdk iphoneos --show-sdk-platform-path)"
