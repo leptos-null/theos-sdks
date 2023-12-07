@@ -42,7 +42,7 @@ jobs:
           # iPhone14,6 random device that support iOS 15+
           ipsw download ipsw --dyld --output "${DSC_DOWNLOAD_DIR}" --version "${SDK_VERSION}" --device "iPhone14,6"
 
-          DYLD_CACHE_PATH="${DSC_DOWNLOAD_DIR}"/*/"dyld_shared_cache_arm64e"
+          DYLD_CACHE_PATH="$(echo "${DSC_DOWNLOAD_DIR}"/*/"dyld_shared_cache_arm64e")"
           echo "DYLD_CACHE_PATH = ${DYLD_CACHE_PATH}"
 
           make dsc_extractor_client
@@ -51,6 +51,6 @@ jobs:
 
           tar -cJf "${SDK_OUTPUT_PATH}.tar.xz" "${SDK_OUTPUT_PATH}"
 
-          RELEASE_TAG="${GITHUB_REF##*/}-${GITHUB_SHA:0:7}"
+          RELEASE_TAG="auto-${GITHUB_SHA:0:7}"
           gh release create "${RELEASE_TAG}" --draft --title "Draft Release"
           gh release upload "${RELEASE_TAG}" "${SDK_OUTPUT_PATH}.tar.xz"
