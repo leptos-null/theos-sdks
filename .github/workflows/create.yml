@@ -16,6 +16,8 @@ jobs:
         run: brew install blacktop/tap/ipsw
 
       - name: Patch SDK
+        env:
+            GH_TOKEN: ${{ github.token }}
         run: |
           cd tools/
           PLATFORM_PATH="$(xcrun --sdk iphoneos --show-sdk-platform-path)"
@@ -27,14 +29,6 @@ jobs:
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
           DSC_DOWNLOAD_DIR="$(mktemp -d -t dsc)"
           TBD_TOOL_PATH="$(mktemp -t tbd)"
-
-          echo "PLATFORM_PATH = ${PLATFORM_PATH}"
-          echo "BASE_SDK_PATH = ${BASE_SDK_PATH}"
-          echo "SDK_VERSION = ${SDK_VERSION}"
-          echo "SDK_OUTPUT_PATH = ${SDK_OUTPUT_PATH}"
-          echo "SYMBOLS_DIR = ${SYMBOLS_DIR}"
-          echo "DSC_DOWNLOAD_DIR = ${DSC_DOWNLOAD_DIR}"
-          echo "TBD_TOOL_PATH = ${TBD_TOOL_PATH}"
 
           curl -L "https://github.com/inoahdev/tbd/releases/download/2.2/tbd-mac" -o "${TBD_TOOL_PATH}"
           chmod 0755 "${TBD_TOOL_PATH}"
