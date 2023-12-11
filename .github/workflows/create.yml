@@ -18,11 +18,15 @@ jobs:
       - name: Install blacktop/ipsw
         run: brew install blacktop/tap/ipsw
 
+      - name: Install aria2
+        run: brew install aria2
+
       - name: Patch SDK
         env:
           DEVELOPER_DIR: /Applications/Xcode_14.1.app
           GH_TOKEN: ${{ github.token }}
         run: |
+          # iPhone14,6 random device that support iOS 15+
           # config
           XC_SDK_NAME="appletvos"
           SDK_PREFIX="AppleTVOS"
@@ -37,17 +41,40 @@ jobs:
           SDK_OUTPUT_PATH="${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
-          DSC_DOWNLOAD_DIR="$(mktemp -d -t dsc)"
+          IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
+          IPSW_EXTRACTION_DIR="$(mktemp -d -t ipsw)"
+          DMG_MOUNT_ROOT="$(mktemp -d -t dmg)"
           TBD_TOOL_PATH="$(mktemp -t tbd)"
 
           curl -L "https://github.com/inoahdev/tbd/releases/download/2.2/tbd-mac" -o "${TBD_TOOL_PATH}"
           chmod 0755 "${TBD_TOOL_PATH}"
 
-          # iPhone14,6 random device that support iOS 15+
-          ipsw download ipsw --dyld --output "${DSC_DOWNLOAD_DIR}" --version "${SDK_VERSION}" --device "${IPSW_DEVICE}"
+          # `--dyld` is a convenient parameter for us, however it only supports iOS 16+
+          IPSW_DOWNLOAD_URL="$(ipsw download ipsw --urls --version "${SDK_VERSION}" --device "${IPSW_DEVICE}")"
 
-          DYLD_CACHE_PATH="$(echo "${DSC_DOWNLOAD_DIR}"/*/"${DSC_BASENAME}")"
-          echo "DYLD_CACHE_PATH = ${DYLD_CACHE_PATH}"
+          aria2c --dir "${IPSW_DOWNLOAD_DIR}" "${IPSW_DOWNLOAD_URL}"
+          unzip -d "${IPSW_EXTRACTION_DIR}" "${IPSW_DOWNLOAD_DIR}"/*.ipsw "*.dmg"
+
+          for DMG_FILE in "${IPSW_EXTRACTION_DIR}"/*.dmg; do
+            hdiutil attach "${DMG_FILE}" -mountroot "${DMG_MOUNT_ROOT}"
+            for MOUNT_VOL in "${DMG_MOUNT_ROOT}"/*; do
+              DYLD_CACHE_PATH="${MOUNT_VOL}/System/Library/Caches/com.apple.dyld/${DSC_BASENAME}"
+              ls -alh "${DYLD_CACHE_PATH}" # debug
+              if [[ -e "${DYLD_CACHE_PATH}" ]]; then
+                break 2 # break out of DMG_FILE loop
+              fi
+              # here becuase we didn't find the dyld shared cache (didn't break)
+              unset DYLD_CACHE_PATH
+              hdiutil detach "${MOUNT_VOL}"
+            done
+          done
+
+          echo "DYLD_CACHE_PATH = ${DYLD_CACHE_PATH}" # debug
+
+          if [[ -z "${DYLD_CACHE_PATH}" ]]; then
+            echo "Failed to find ${DSC_BASENAME} in ${IPSW_DOWNLOAD_URL}"
+            exit 1
+          fi
 
           make dsc_extractor_client
           ./dsc_extractor_client "${PLATFORM_PATH}/usr/lib/dsc_extractor.bundle" "${DYLD_CACHE_PATH}" "${SYMBOLS_DIR}"
