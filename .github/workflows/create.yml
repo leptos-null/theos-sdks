@@ -48,7 +48,6 @@ jobs:
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
           IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
           IPSW_EXTRACTION_DIR="$(mktemp -d -t ipsw)"
-          DMG_MOUNT_ROOT="$(mktemp -d -t dmg)"
           TBD_TOOL_PATH="$(mktemp -t tbd)"
 
           curl -L "https://github.com/inoahdev/tbd/releases/download/2.2/tbd-mac" -o "${TBD_TOOL_PATH}"
@@ -61,6 +60,7 @@ jobs:
           unzip -d "${IPSW_EXTRACTION_DIR}" "${IPSW_DOWNLOAD_DIR}"/*.ipsw "*.dmg"
 
           for DMG_FILE in "${IPSW_EXTRACTION_DIR}"/*.dmg; do
+            DMG_MOUNT_ROOT="$(mktemp -d -t dmg)"
             hdiutil attach "${DMG_FILE}" -mountroot "${DMG_MOUNT_ROOT}"
             for MOUNT_VOL in "${DMG_MOUNT_ROOT}"/*; do
               DYLD_CACHE_PATH="${MOUNT_VOL}/System/Library/Caches/com.apple.dyld/${DSC_BASENAME}"
@@ -70,7 +70,7 @@ jobs:
               fi
               # here becuase we didn't find the dyld shared cache (didn't break)
               unset DYLD_CACHE_PATH
-              hdiutil detach "${MOUNT_VOL}"
+              hdiutil detach "${MOUNT_VOL}" || true # this fails occasionally - just ignore
             done
           done
 
