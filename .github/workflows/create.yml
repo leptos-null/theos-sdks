@@ -26,12 +26,17 @@ jobs:
           DEVELOPER_DIR: /Applications/Xcode_14.1.app
           GH_TOKEN: ${{ github.token }}
         run: |
-          # iPhone14,6 random device that support iOS 15+
-          # config
-          XC_SDK_NAME="appletvos"
-          SDK_PREFIX="AppleTVOS"
-          IPSW_DEVICE="AppleTV5,3"
-          DSC_BASENAME="dyld_shared_cache_arm64"
+          # iOS config
+          XC_SDK_NAME="iphoneos"
+          SDK_PREFIX="iPhoneOS"
+          IPSW_DEVICE="iPhone14,6" # random device that support iOS 15+
+          DSC_BASENAME="dyld_shared_cache_arm64e"
+
+          # tvOS config
+          # XC_SDK_NAME="appletvos"
+          # SDK_PREFIX="AppleTVOS"
+          # IPSW_DEVICE="AppleTV5,3"
+          # DSC_BASENAME="dyld_shared_cache_arm64"
 
           cd tools/
           PLATFORM_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-platform-path)"
