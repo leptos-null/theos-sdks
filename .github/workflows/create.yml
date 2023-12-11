@@ -64,7 +64,7 @@ jobs:
             hdiutil attach "${DMG_FILE}" -mountroot "${DMG_MOUNT_ROOT}"
             for MOUNT_VOL in "${DMG_MOUNT_ROOT}"/*; do
               DYLD_CACHE_PATH="${MOUNT_VOL}/System/Library/Caches/com.apple.dyld/${DSC_BASENAME}"
-              ls -alh "${DYLD_CACHE_PATH}" # debug
+              ls -alh "${DYLD_CACHE_PATH}" || true # debug
               if [[ -e "${DYLD_CACHE_PATH}" ]]; then
                 break 2 # break out of DMG_FILE loop
               fi
