@@ -60,6 +60,8 @@ jobs:
           unzip -d "${IPSW_EXTRACTION_DIR}" "${IPSW_DOWNLOAD_DIR}"/*.ipsw "*.dmg"
 
           for DMG_FILE in "${IPSW_EXTRACTION_DIR}"/*.dmg; do
+            # new mount root for each dmg so we don't have to
+            # worry about how we iterate over the mount root
             DMG_MOUNT_ROOT="$(mktemp -d -t dmg)"
             hdiutil attach "${DMG_FILE}" -mountroot "${DMG_MOUNT_ROOT}"
             for MOUNT_VOL in "${DMG_MOUNT_ROOT}"/*; do
