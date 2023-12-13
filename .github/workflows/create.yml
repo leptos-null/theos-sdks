@@ -30,7 +30,7 @@ jobs:
           # iOS config
           XC_SDK_NAME="iphoneos"
           SDK_PREFIX="iPhoneOS"
-          IPSW_DEVICE="iPhone14,6" # random device that support iOS 15+
+          IPSW_DEVICE="iPhone11,2" # supports iOS 12+
           DSC_BASENAME="dyld_shared_cache_arm64e"
 
           # tvOS config
