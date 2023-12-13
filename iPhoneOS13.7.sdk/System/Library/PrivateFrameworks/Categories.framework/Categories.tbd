@@ -32,4 +32,12 @@ exports:
                             _CTOSPlatformmacOS, _CTOSPlatformtvOS,
                             _CTOSPlatformwatchOS ]
     objc-classes:         [ CTCategories, CTCategory, CTError, CTLogging, CTUtilities ]
+    objc-ivars:           [ CTCategories._indexVersionId,
+                            CTCategory._bundleIdentifier,
+                            CTCategory._canonicalBundleIdentifier,
+                            CTCategory._equivalentBundleIdentifiers,
+                            CTCategory._identifier, CTCategory._primaryWebDomain,
+                            CTCategory._resourceString,
+                            CTCategory._secondaryIdentifier,
+                            CTCategory._webDomains ]
 ...

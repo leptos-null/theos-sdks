@@ -44,4 +44,6 @@ exports:
                             _kMAOptionsFactoryActivationRequest,
                             _kNotificationActivationStateChanged,
                             _kNotificationBrickStateChanged ]
+    objc-classes:         [ MadGate ]
+    objc-ivars:           [ MadGate._connection ]
 ...

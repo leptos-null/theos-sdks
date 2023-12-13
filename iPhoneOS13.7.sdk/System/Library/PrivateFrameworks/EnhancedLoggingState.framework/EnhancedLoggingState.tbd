@@ -59,4 +59,22 @@ exports:
     objc-classes:         [ ELSEntitlementUtilities, ELSEvent, ELSManager,
                             ELSQueueEntry, ELSSnapshot, ELSWhitelist,
                             ELSWhitelistEntry ]
+    objc-ivars:           [ ELSManager._defaults, ELSManager._snapshot,
+                            ELSQueueEntry._executeAfterDuration,
+                            ELSQueueEntry._parameters, ELSQueueEntry._retry,
+                            ELSQueueEntry._type, ELSQueueEntry._typeName,
+                            ELSSnapshot._consent, ELSSnapshot._defaults,
+                            ELSSnapshot._endDate, ELSSnapshot._followUpOptions,
+                            ELSSnapshot._identifiersToRetry,
+                            ELSSnapshot._metadata, ELSSnapshot._queue,
+                            ELSSnapshot._retriesRemaining,
+                            ELSSnapshot._startDate, ELSSnapshot._status,
+                            ELSSnapshot._uploadCompletedPercentage,
+                            ELSWhitelistEntry._bundleIdentifier,
+                            ELSWhitelistEntry._descriptionLocalizationKey,
+                            ELSWhitelistEntry._displayNameLocalizationKey,
+                            ELSWhitelistEntry._parameterName,
+                            ELSWhitelistEntry._requiresFollowup,
+                            ELSWhitelistEntry._retry,
+                            ELSWhitelistEntry._sensitiveInformationLocalizationKey ]
 ...

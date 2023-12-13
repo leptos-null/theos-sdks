@@ -8,5 +8,10 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    objc-classes:         [ SecureChannelAction, SecureChannelController ]
+    objc-classes:         [ SecureChannelAction, SecureChannelController,
+                            SecureChannelServiceProxy ]
+    objc-ivars:           [ SecureChannelAction._message,
+                            SecureChannelAction._title, SecureChannelAction._url,
+                            SecureChannelServiceProxy._connectionToService,
+                            SecureChannelServiceProxy._remoteObject ]
 ...

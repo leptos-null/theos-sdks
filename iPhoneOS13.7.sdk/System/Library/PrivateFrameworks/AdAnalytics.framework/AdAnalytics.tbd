@@ -11,4 +11,14 @@ exports:
     symbols:              [ _AdAnalyticsErrorDomain, _AdAnalyticsVersionNumber,
                             _AdAnalyticsVersionString ]
     objc-classes:         [ AdAnalyticsCommon, AdAnalyticsEventInfo, AdAnalyzer ]
+    objc-ivars:           [ AdAnalyticsEventInfo._adID,
+                            AdAnalyticsEventInfo._bundleID,
+                            AdAnalyticsEventInfo._currentPlaybackTime,
+                            AdAnalyticsEventInfo._sequenceNumber,
+                            AdAnalyticsEventInfo._timestamp,
+                            AdAnalyticsEventInfo._totalDuration,
+                            AdAnalyticsEventInfo._videoState,
+                            AdAnalyticsEventInfo._visiblePercentage,
+                            AdAnalyticsEventInfo._volume,
+                            AdAnalyzer._adSequences ]
 ...

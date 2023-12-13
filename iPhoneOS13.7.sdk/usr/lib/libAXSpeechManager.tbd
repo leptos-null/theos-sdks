@@ -1,19 +1,85 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64, arm64e ]
-uuids:           [ 'armv7: CA74637E-4BA9-37CD-BC26-6E4512906685', 'armv7s: 65DBE8F9-72B4-381D-8670-91B327ECB8D3', 
-                   'arm64: CD9F41F2-372A-37B3-A0B7-820EEC97A6B9', 'arm64e: 57409158-710F-307C-B4BD-C341A2A89112' ]
-platform:        ios
-install-name:    '/usr/lib/libAXSpeechManager.dylib'
-exports:         
-  - archs:           [ armv7, armv7s ]
-    symbols:         [ _AXLanguageCanonicalFormToGeneralLanguage, __AXSpeechReplaceEmoticons ]
-    objc-classes:    [ AXSpeechThread ]
-  - archs:           [ armv7, armv7s, arm64, arm64e ]
-    symbols:         [ _AXAVSpeechSynthesisVoiceFromTTSSpeechVoice, _AXAVVoiceQualityFromTTSFootprint, 
-                       _AXAlexVoiceIdentifier, _AXNeuralSiriFemaleVoiceIdentifier, 
-                       _AXNeuralSiriMaleVoiceIdentifier, _AXRemapLanguageCodeForSpeech, 
-                       _AXSiriFemaleVoiceIdentifier, _AXSiriMaleVoiceIdentifier, 
-                       _AXSpeechLanguageCanonicalFormToGeneralLanguage, _AXSpeechTransformText, 
-                       _AXSpeechTransformTextWithLanguage, _VOTBundle, _isSpeakableEmojiString ]
-    objc-classes:    [ AXEmojiUtilities, AXSpeechAction, AXSpeechManager ]
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/libAXSpeechManager.dylib
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _AXAVSpeechSynthesisVoiceFromTTSSpeechVoice,
+                            _AXAVVoiceQualityFromTTSFootprint,
+                            _AXAlexVoiceIdentifier,
+                            _AXLanguageCanonicalFormToGeneralLanguage,
+                            _AXNeuralSiriFemaleVoiceIdentifier,
+                            _AXNeuralSiriMaleVoiceIdentifier,
+                            _AXRemapLanguageCodeForSpeech,
+                            _AXSiriFemaleVoiceIdentifier,
+                            _AXSiriMaleVoiceIdentifier,
+                            _AXSpeechLanguageCanonicalFormToGeneralLanguage,
+                            _AXSpeechTransformText,
+                            _AXSpeechTransformTextWithLanguage,
+                            _AXUIServerProcessName, _VOTBundle,
+                            __AXSpeechReplaceEmoticons, _isSpeakableEmojiString ]
+    objc-classes:         [ AXEmojiUtilities, AXSpeechAction, AXSpeechManager,
+                            AXSpeechThread ]
+    objc-ivars:           [ AXSpeechAction._attributedString,
+                            AXSpeechAction._audioBufferCallback,
+                            AXSpeechAction._cannotInterrupt,
+                            AXSpeechAction._completionCallback,
+                            AXSpeechAction._emojiRangeReplacements,
+                            AXSpeechAction._finalSpokenString,
+                            AXSpeechAction._ignoreCustomSubstitutions,
+                            AXSpeechAction._language,
+                            AXSpeechAction._onPauseCallback,
+                            AXSpeechAction._onResumeCallback,
+                            AXSpeechAction._onSpeechStartCallback,
+                            AXSpeechAction._onWillSpeakRangeCallback,
+                            AXSpeechAction._pitch,
+                            AXSpeechAction._processedString,
+                            AXSpeechAction._shouldDetectLanguage,
+                            AXSpeechAction._shouldPrecomposeString,
+                            AXSpeechAction._shouldProcessEmoji,
+                            AXSpeechAction._shouldProcessEmoticons,
+                            AXSpeechAction._shouldQueue,
+                            AXSpeechAction._speakingRate, AXSpeechAction._state,
+                            AXSpeechAction._string,
+                            AXSpeechAction._synthesizeSilently,
+                            AXSpeechAction._useMonarchStyleSpeechRate,
+                            AXSpeechAction._voiceIdentifier,
+                            AXSpeechAction._volume,
+                            AXSpeechAction._wordCallbackPostProcessedOffset,
+                            AXSpeechManager._audioDeactivatorTimer,
+                            AXSpeechManager._audioInterruptionStartedTime,
+                            AXSpeechManager._audioQueueFlags,
+                            AXSpeechManager._audioSession,
+                            AXSpeechManager._audioSessionCategory,
+                            AXSpeechManager._audioSessionCategoryOptions,
+                            AXSpeechManager._audioSessionInactiveTimeout,
+                            AXSpeechManager._audioSessionObserversEnabled,
+                            AXSpeechManager._didRequestPauseSpeakingDuringAudioInterruption,
+                            AXSpeechManager._didRequestResumeSpeakingDuringAudioInterruption,
+                            AXSpeechManager._didRequestStartSpeakingDuringAudioInterruption,
+                            AXSpeechManager._isInAudioInterruption,
+                            AXSpeechManager._isPaused,
+                            AXSpeechManager._isSpeaking,
+                            AXSpeechManager._originalSpeechRateForJobOverride,
+                            AXSpeechManager._propertyQueue,
+                            AXSpeechManager._requestWillStart,
+                            AXSpeechManager._requestedActionDuringAudioInterruption,
+                            AXSpeechManager._runThread,
+                            AXSpeechManager._setActiveOptions,
+                            AXSpeechManager._shouldHandleAudioInterruptions,
+                            AXSpeechManager._showControlCenterControls,
+                            AXSpeechManager._speechEnabled,
+                            AXSpeechManager._speechQueue,
+                            AXSpeechManager._speechThreadFinished,
+                            AXSpeechManager._speechThreadQueueLock,
+                            AXSpeechManager._supportsAccurateWordCallbacks,
+                            AXSpeechManager._synthesizer,
+                            AXSpeechManager._usesAuxiliarySession,
+                            AXSpeechManager._wasSpeakingBeforeAudioInterruption,
+                            AXSpeechThread._machPort,
+                            AXSpeechThread._threadRunLoop ]
 ...

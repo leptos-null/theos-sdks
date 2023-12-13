@@ -150,4 +150,24 @@ exports:
                             _iPhone_SettingVideo_light_FG_mix_V0,
                             _iPhone_SettingVideo_light_FG_mix_V1 ]
     objc-classes:         [ ASEProcessing ]
+    objc-ivars:           [ ASEProcessing._FD_state, ASEProcessing._FG_count,
+                            ASEProcessing._NFG_count,
+                            ASEProcessing._aseFrameProcessing,
+                            ASEProcessing._aseProcessingType,
+                            ASEProcessing._aseProcessingVersion,
+                            ASEProcessing._completionQueue,
+                            ASEProcessing._destinationHeight,
+                            ASEProcessing._destinationWidth,
+                            ASEProcessing._enhancementStrength,
+                            ASEProcessing._inputHeight,
+                            ASEProcessing._inputWidth,
+                            ASEProcessing._noiseMeterStepSize,
+                            ASEProcessing._numberOfProcessedFrames,
+                            ASEProcessing._numberOfRequestedFrames,
+                            ASEProcessing._numberOfScheduledFrames,
+                            ASEProcessing._prev_H1_7, ASEProcessing._prev_V1_7,
+                            ASEProcessing._prev_ratio_2D_1D,
+                            ASEProcessing._productType,
+                            ASEProcessing._scheduleQueue,
+                            ASEProcessing._scheduleSemaphone ]
 ...

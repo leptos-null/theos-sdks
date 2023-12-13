@@ -177,11 +177,13 @@ exports:
                             _kSCRDSeikaNotetakerBluetoothNameRegExPattern,
                             _kSCRDUSBDeviceDisconnectNotification,
                             _kSCRODBaumVario340DeviceIdentifier ]
-    objc-classes:         [ SCRDFileReader, SCRDUSBDevice ]
+    objc-classes:         [ SCRDFileReader, SCRDKGSPacket, SCRDUSBDevice ]
     objc-ivars:           [ SCRDFileReader._delegate, SCRDFileReader._fileHandle,
                             SCRDFileReader._readerThread,
                             SCRDFileReader._threadStartCount,
-                            SCRDUSBDevice._device, SCRDUSBDevice._interface,
+                            SCRDKGSPacket._command, SCRDKGSPacket._data,
+                            SCRDKGSPacket._subCommand, SCRDUSBDevice._device,
+                            SCRDUSBDevice._interface,
                             SCRDUSBDevice._isConfigured, SCRDUSBDevice._isOpen,
                             SCRDUSBDevice._notification,
                             SCRDUSBDevice._notificationPort,

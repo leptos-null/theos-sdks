@@ -12,4 +12,8 @@ exports:
     objc-classes:         [ PARCategory, PARCollectionStartEvent, PAREvent,
                             PARFlushEvent, PARImagesSession, PARSafariSession,
                             PARSpotlightSession, PARUsageEvent ]
+    objc-ivars:           [ PARCategory.clientIntVal, PARCategory.isGoTo,
+                            PARCategory.isPunchout, PARCategory.isTop,
+                            PARCategory.resultTypeIntVal, PARFlushEvent.type,
+                            PARUsageEvent.usageCategory ]
 ...

@@ -12,4 +12,15 @@ exports:
                             _AXSpeakFingerManagerVersionNumber,
                             _AXSpeakFingerManagerVersionString ]
     objc-classes:         [ AXSpeakFingerManager ]
+    objc-ivars:           [ AXSpeakFingerManager._currentSpeakFingerElement,
+                            AXSpeakFingerManager._elementsForUnitTests,
+                            AXSpeakFingerManager._hapticGenerator,
+                            AXSpeakFingerManager._inUnitTestMode,
+                            AXSpeakFingerManager._lastTouchPoint,
+                            AXSpeakFingerManager._orator,
+                            AXSpeakFingerManager._speakFingerState,
+                            AXSpeakFingerManager._springBoardActionHandlerId,
+                            AXSpeakFingerManager._stateUpdateBlocks,
+                            AXSpeakFingerManager._unitTestSpeaking,
+                            AXSpeakFingerManager._voiceOverDisplayManagerClient ]
 ...

@@ -8,6 +8,11 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    objc-classes:         [ CKCourse, CKCourseLibrary, CKSharedCourse,
-                            CKSharedDatabase ]
+    objc-classes:         [ CKCourse, CKCourseLibrary, CKImageTransformer,
+                            CKSharedCourse, CKSharedDatabase ]
+    objc-ivars:           [ CKCourse._sharedCourse, CKCourseLibrary._moc,
+                            CKCourseLibrary._sharedDatabase,
+                            CKSharedDatabase._mainManagedObjectContext,
+                            CKSharedDatabase._managedObjectModel,
+                            CKSharedDatabase._persistentStoreCoordinator ]
 ...

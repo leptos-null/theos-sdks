@@ -13,4 +13,5 @@ exports:
                             _HeroAppPredictionClientVersionString,
                             _kATXHeroAppPredictionXPCInterfaceMachServiceName ]
     objc-classes:         [ ATXHeroAppPredictionClient ]
+    objc-ivars:           [ ATXHeroAppPredictionClient._xpcConnection ]
 ...

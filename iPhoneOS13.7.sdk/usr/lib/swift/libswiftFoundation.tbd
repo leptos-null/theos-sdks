@@ -5,7 +5,6 @@ flags:                 [ flat_namespace ]
 install-name:          /usr/lib/swift/libswiftFoundation.dylib
 current-version:       0
 compatibility-version: 1
-swift-abi-version:     6
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
@@ -4375,5 +4374,11 @@ exports:
                             _$ss8RepeatedVyxG10Foundation12DataProtocolADs5UInt8VRszlMc,
                             __swift_FORCE_LOAD_$_swiftFoundation,
                             _swift_errorBridgingInfo_ ]
-    objc-classes:         [ _NSKeyValueObservation ]
+    objc-classes:         [ _NSKeyValueObservation,
+                            _TtC10Foundation13__NSSwiftData,
+                            _TtC10FoundationP33_6DA0945A07226B3278459E9368612FF427__KVOKeyPathBridgeMachinery,
+                            _TtC10FoundationP33_AE6BD10245B422606B9EE93C01570D8F21_CombineRunLoopAction,
+                            _TtCC10Foundation21NSKeyValueObservationP33_6DA0945A07226B3278459E9368612FF46Helper,
+                            _TtCC10FoundationP33_6DA0945A07226B3278459E9368612FF427__KVOKeyPathBridgeMachinery9BridgeKey,
+                            _TtCE10FoundationCSo16NSOperationQueueP33_0ECEE0A75E2DD5EDFED9A6FEB26D5D3219DelayReadyOperation ]
 ...

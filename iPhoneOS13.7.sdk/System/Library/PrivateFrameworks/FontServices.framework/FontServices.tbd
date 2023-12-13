@@ -39,4 +39,12 @@ exports:
                             FSUserFontServicesManager, FontPickerSupportHandler,
                             FontPickerSupporter, FontProviderManager,
                             FontServicesDaemonManager ]
+    objc-ivars:           [ DeleteAppFontsDialogHandler._completionHandler,
+                            DeleteAppFontsDialogHandler._listener,
+                            FontPickerSupportHandler._listener,
+                            FontPickerSupporter._clientEndpoint,
+                            FontPickerSupporter._clientHasFontAccessEntitlement,
+                            FontPickerSupporter._connection,
+                            FontProviderManager._connection,
+                            FontServicesDaemonManager._connection ]
 ...

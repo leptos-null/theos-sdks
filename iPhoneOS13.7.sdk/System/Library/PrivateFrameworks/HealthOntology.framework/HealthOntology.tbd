@@ -11,4 +11,6 @@ exports:
     symbols:              [ _HealthOntologyVersionNumber,
                             _HealthOntologyVersionString ]
     objc-classes:         [ HNNode, HNOntology, HNPredicate, HNQuery, HNRelationship ]
+    objc-ivars:           [ HNNode._identifier, HNNode._properties,
+                            HNQuery._predicate, HNRelationship._type ]
 ...

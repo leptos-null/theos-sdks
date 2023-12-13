@@ -23,4 +23,24 @@ exports:
                             _nanocamera_log_app, _nanocamera_log_control,
                             _nanocamera_log_preview ]
     objc-classes:         [ CCCameraConnection, CCCameraConnectionInternal ]
+    objc-ivars:           [ CCCameraConnection._burstInProgress,
+                            CCCameraConnection._captureStartDate,
+                            CCCameraConnection._capturing,
+                            CCCameraConnection._currentPreviewState,
+                            CCCameraConnection._delegate,
+                            CCCameraConnection._desiredPreviewState,
+                            CCCameraConnection._deviceConnectedNotificationToken,
+                            CCCameraConnection._deviceDisconnectedNotificationToken,
+                            CCCameraConnection._internal,
+                            CCCameraConnection._interruptionCount,
+                            CCCameraConnection._lastSentZoomAmount,
+                            CCCameraConnection._orientationChangeObserver,
+                            CCCameraConnection._pendingZoomAmount,
+                            CCCameraConnection._previewEndpoint,
+                            CCCameraConnection._remoteViewfinder,
+                            CCCameraConnection._remoteViewfinderSession,
+                            CCCameraConnection._shallowDepthOfFieldStatus,
+                            CCCameraConnection._xpc,
+                            CCCameraConnection._zoomTimer,
+                            CCCameraConnectionInternal._parent ]
 ...

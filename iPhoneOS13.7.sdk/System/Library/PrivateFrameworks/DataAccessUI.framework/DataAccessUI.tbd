@@ -16,5 +16,19 @@ exports:
                             DASettingsAccountsUIController,
                             DASettingsDataclassConfigurationViewController ]
     objc-ivars:           [ DADiagnosticsNotesPane._notesView,
-                            DASettingsAccountsUIController._account ]
+                            DADiagnosticsPSController._savingDataAlert,
+                            DADiagnosticsPSController._simpleAlert,
+                            DADiagnosticsPSController._simpleConfirmSheetDismissedSEL,
+                            DASettingsAccountsUIController._account,
+                            DASettingsAccountsUIController._accountNeedsAdd,
+                            DASettingsAccountsUIController._attemptedValidation,
+                            DASettingsAccountsUIController._confirmedUnvalidatedAccount,
+                            DASettingsAccountsUIController._didSetFullHostURL,
+                            DASettingsAccountsUIController._haveRegisteredForAccountsChanged,
+                            DASettingsAccountsUIController._isSettingUpNewAccount,
+                            DASettingsAccountsUIController._needsSave,
+                            DASettingsAccountsUIController._transitioningToFinishedAccountSetup,
+                            DASettingsAccountsUIController._validatedSuccessfully,
+                            DASettingsDataclassConfigurationViewController._daAccount,
+                            DASettingsDataclassConfigurationViewController._haveRegisteredForAccountsChanged ]
 ...

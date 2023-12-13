@@ -35,4 +35,14 @@ exports:
                             _oobPairing_bleToOobPairingType,
                             _oobPairing_oobToBlePairingType ]
     objc-classes:         [ ACCBLEPairingAccessory, ACCBLEPairingProvider ]
+    objc-ivars:           [ ACCBLEPairingAccessory._accInfo,
+                            ACCBLEPairingAccessory._accessoryUID,
+                            ACCBLEPairingAccessory._desiredBLEPairingState,
+                            ACCBLEPairingProvider._accDetectToken,
+                            ACCBLEPairingProvider._accessories,
+                            ACCBLEPairingProvider._delegate,
+                            ACCBLEPairingProvider._lastScorpiusDetectType,
+                            ACCBLEPairingProvider._providerUID,
+                            ACCBLEPairingProvider._remoteObject,
+                            ACCBLEPairingProvider._serverConnection ]
 ...

@@ -26,9 +26,18 @@ exports:
                             _kiCloudPersonIDKey, _kiCloudPrimaryAccountKey ]
     objc-classes:         [ AIDAAccountManager, AIDAMutableServiceContext,
                             AIDAServiceContext, AIDAServiceOwnersManager ]
-    objc-ivars:           [ AIDAServiceContext._authenticationResults,
+    objc-ivars:           [ AIDAAccountManager._accountManagerLock,
+                            AIDAAccountManager._accountStore,
+                            AIDAAccountManager._accounts,
+                            AIDAAccountManager._delegate,
+                            AIDAAccountManager._handlerByObserver,
+                            AIDAAccountManager._serviceOwnersManager,
+                            AIDAServiceContext._authenticationResults,
                             AIDAServiceContext._cdpUiProvider,
                             AIDAServiceContext._operationUIPermissions,
                             AIDAServiceContext._shouldForceOperation,
-                            AIDAServiceContext._viewController ]
+                            AIDAServiceContext._viewController,
+                            AIDAServiceOwnersManager._accountStore,
+                            AIDAServiceOwnersManager._serviceOwners,
+                            AIDAServiceOwnersManager._serviceOwnersLock ]
 ...

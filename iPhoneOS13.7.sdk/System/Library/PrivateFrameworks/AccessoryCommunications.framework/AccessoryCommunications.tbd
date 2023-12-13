@@ -103,4 +103,15 @@ exports:
                             _kCFACCCommunications_SubscriberList_ListUpdates_Recents,
                             _kCFACCCommunications_SubscriberList_ListUpdates_Recents_Coalesced ]
     objc-classes:         [ ACCCommunicationsCenter ]
+    objc-ivars:           [ ACCCommunicationsCenter._cachedCommStatus,
+                            ACCCommunicationsCenter._callControlsDelegate,
+                            ACCCommunicationsCenter._callStateCache,
+                            ACCCommunicationsCenter._callStateDelegate,
+                            ACCCommunicationsCenter._communicationsDelegate,
+                            ACCCommunicationsCenter._listUpdatesDelegate,
+                            ACCCommunicationsCenter._maxFavoritesListEntries,
+                            ACCCommunicationsCenter._maxRecentsListEntries,
+                            ACCCommunicationsCenter._remoteObject,
+                            ACCCommunicationsCenter._serverConnection,
+                            ACCCommunicationsCenter._subscriberList ]
 ...

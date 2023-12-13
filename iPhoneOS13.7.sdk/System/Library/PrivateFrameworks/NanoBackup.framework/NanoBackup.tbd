@@ -12,4 +12,24 @@ exports:
                             _NBLoggingFrameworkObjectInit, _nb_daemon_log,
                             _nb_framework_log ]
     objc-classes:         [ NBBackup, NBManager ]
+    objc-ivars:           [ NBBackup._activeWatchFaceFileURL,
+                            NBBackup._backingColor, NBBackup._backupType,
+                            NBBackup._bcmWindowMaterial,
+                            NBBackup._bottomEnclosureMaterial,
+                            NBBackup._coverGlassColor, NBBackup._deviceColor,
+                            NBBackup._deviceEnclosureColor,
+                            NBBackup._diagnosticsOptInEnabled,
+                            NBBackup._fcmMaterial,
+                            NBBackup._hasResolvedActiveWatchFaceFilePath,
+                            NBBackup._housingColor,
+                            NBBackup._lastModificationDate,
+                            NBBackup._locationOptInEnabled,
+                            NBBackup._marketingVersion, NBBackup._name,
+                            NBBackup._productName, NBBackup._productType,
+                            NBBackup._sizeInBytes, NBBackup._systemBuildVersion,
+                            NBBackup._systemVersion,
+                            NBBackup._topEnclosureMaterial, NBBackup._uuid,
+                            NBBackup._watchFace, NBBackup._watchFaceColor,
+                            NBManager._externalQueue, NBManager._internalQueue,
+                            NBManager._xpcConnection ]
 ...

@@ -21,4 +21,8 @@ exports:
                             _AccessoryAudioVersionString,
                             _AccessoryDigitalAudioNotificationCallBack ]
     objc-classes:         [ ACCAudioClient, ACCAudioManager ]
+    objc-ivars:           [ ACCAudioClient._delegate,
+                            ACCAudioClient._remoteObject,
+                            ACCAudioClient._serverConnection,
+                            ACCAudioManager._audioClient ]
 ...

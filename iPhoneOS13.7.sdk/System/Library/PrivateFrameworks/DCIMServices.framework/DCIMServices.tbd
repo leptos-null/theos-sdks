@@ -262,4 +262,6 @@ exports:
                             DCIMImageWellUtilities, DCIMImageWriter,
                             DCIMLocationUtilities, DCIMSlalomUtilities,
                             PLIOSurfaceData ]
+    objc-ivars:           [ PLIOSurfaceData._bytes, PLIOSurfaceData._length,
+                            PLIOSurfaceData._surface ]
 ...

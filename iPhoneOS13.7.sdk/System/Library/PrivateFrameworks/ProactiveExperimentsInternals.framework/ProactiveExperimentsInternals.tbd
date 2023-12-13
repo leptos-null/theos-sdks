@@ -17,4 +17,7 @@ exports:
     objc-classes:         [ PREResponsesServerDelegate,
                             PREResponsesServerRequestHandler, PREXPCServer,
                             PREXPCServerHelper ]
+    objc-ivars:           [ PREResponsesServerRequestHandler._bundleIdResolver,
+                            PREResponsesServerRequestHandler._clientProcessName,
+                            PREResponsesServerRequestHandler._clientProxy ]
 ...

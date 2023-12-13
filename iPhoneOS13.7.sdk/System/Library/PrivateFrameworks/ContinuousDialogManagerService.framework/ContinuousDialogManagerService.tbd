@@ -19,4 +19,6 @@ exports:
                             _ContinuousDialogManagerServiceVersionNumber,
                             _ContinuousDialogManagerServiceVersionString ]
     objc-classes:         [ CDMSetupXPCClient, CDMXPCClient ]
+    objc-ivars:           [ CDMSetupXPCClient._connection,
+                            CDMXPCClient._connection, CDMXPCClient._delegate ]
 ...

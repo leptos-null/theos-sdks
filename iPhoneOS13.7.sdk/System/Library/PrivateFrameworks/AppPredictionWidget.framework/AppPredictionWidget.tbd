@@ -12,4 +12,16 @@ exports:
                             _AppPredictionWidgetVersionString ]
     objc-classes:         [ APWAppIconAndLabelView, APWDebugLightView, APWSettings,
                             APWUtil ]
+    objc-ivars:           [ APWAppIconAndLabelView._bundleIdentifier,
+                            APWAppIconAndLabelView._iconButton,
+                            APWAppIconAndLabelView._iconLabelTraitCollection,
+                            APWAppIconAndLabelView._label,
+                            APWDebugLightView._blinkDisplayLink,
+                            APWDebugLightView._blinkHertz,
+                            APWDebugLightView._ledColor,
+                            APWDebugLightView._ledIsOn,
+                            APWDebugLightView._ledView,
+                            APWSettings._internalSettings,
+                            APWSettings._lastViewDidDisappearDate,
+                            APWSettings._widgetFeedbackEnabled ]
 ...

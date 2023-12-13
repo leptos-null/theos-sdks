@@ -11,4 +11,11 @@ exports:
     symbols:              [ _FoundInAppsPluginsVersionNumber,
                             _FoundInAppsPluginsVersionString ]
     objc-classes:         [ FIAPHistoricalDataRequest, FIAPResult ]
+    objc-ivars:           [ FIAPHistoricalDataRequest._endDate,
+                            FIAPHistoricalDataRequest._personHandle,
+                            FIAPHistoricalDataRequest._pluginIdentifier,
+                            FIAPHistoricalDataRequest._requestId,
+                            FIAPHistoricalDataRequest._startDate,
+                            FIAPResult._error,
+                            FIAPResult._historicalDataRequests ]
 ...

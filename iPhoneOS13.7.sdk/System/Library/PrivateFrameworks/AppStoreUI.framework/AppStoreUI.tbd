@@ -11,4 +11,5 @@ exports:
     symbols:              [ _ASAppStoreUIBundle ]
     objc-classes:         [ ASClientController, ASPurchaseBatch,
                             ASViewControllerFactory ]
+    objc-ivars:           [ ASClientController._shouldExitAfterPurchases ]
 ...

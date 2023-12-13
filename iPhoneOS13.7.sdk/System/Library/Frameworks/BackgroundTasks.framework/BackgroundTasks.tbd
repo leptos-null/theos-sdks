@@ -1,12 +1,33 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64, arm64e ]
-uuids:           [ 'armv7: 00000000-0000-0000-0000-000000000000', 'armv7s: 00000000-0000-0000-0000-000000000000', 
-                   'arm64: DE6606BE-FB69-3A39-9D11-F121091F0105', 'arm64e: C35A25B8-5CA5-3E2F-B9C0-316B4C45464F' ]
-platform:        ios
-install-name:    '/System/Library/Frameworks/BackgroundTasks.framework/BackgroundTasks'
-exports:         
-  - archs:           [ armv7, armv7s, arm64, arm64e ]
-    symbols:         [ _BGTaskSchedulerErrorDomain, __BGTaskSchedulerRunningTasksDidChangeNotification ]
-    objc-classes:    [ BGAppRefreshTask, BGAppRefreshTaskRequest, BGProcessingTask, 
-                       BGProcessingTaskRequest, BGTask, BGTaskRequest, BGTaskScheduler ]
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/BackgroundTasks.framework/BackgroundTasks
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _BGTaskSchedulerErrorDomain,
+                            __BGTaskSchedulerRunningTasksDidChangeNotification ]
+    objc-classes:         [ BGAppRefreshTask, BGAppRefreshTaskRequest,
+                            BGProcessingTask, BGProcessingTaskRequest, BGTask,
+                            BGTaskRequest, BGTaskScheduler,
+                            _BGTaskSchedulerRegistration ]
+    objc-ivars:           [ BGProcessingTaskRequest._requiresExternalPower,
+                            BGProcessingTaskRequest._requiresNetworkConnectivity,
+                            BGTask.__activity, BGTask.__completed,
+                            BGTask.__completionHandler, BGTask.__handlerQueue,
+                            BGTask.__lock, BGTask._expirationHandler,
+                            BGTask._identifier, BGTaskRequest._earliestBeginDate,
+                            BGTaskRequest._identifier, BGTaskScheduler.__lock,
+                            BGTaskScheduler.__permittedIdentifiers,
+                            BGTaskScheduler.__queuedExpiredLaunchActivities,
+                            BGTaskScheduler.__queuedLaunchActivities,
+                            BGTaskScheduler.__registrations,
+                            BGTaskScheduler.__runningTasksMap,
+                            BGTaskScheduler.__scheduler,
+                            _BGTaskSchedulerRegistration._identifier,
+                            _BGTaskSchedulerRegistration._launchHandler,
+                            _BGTaskSchedulerRegistration._queue ]
 ...

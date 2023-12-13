@@ -11,4 +11,6 @@ exports:
     symbols:              [ _OSAServicesClientVersionNumber,
                             _OSAServicesClientVersionString ]
     objc-classes:         [ OSAServicesClient ]
+    objc-ivars:           [ OSAServicesClient._connection,
+                            OSAServicesClient._synchRemoteObjectProxy ]
 ...

@@ -138,4 +138,5 @@ exports:
                             _kSymptomAnalyticsTypeBundleIdentifier,
                             _kSymptomAnalyticsTypeProcessName ]
     objc-classes:         [ NetworkPerformanceQuery ]
+    objc-ivars:           [ NetworkPerformanceQuery._connection ]
 ...

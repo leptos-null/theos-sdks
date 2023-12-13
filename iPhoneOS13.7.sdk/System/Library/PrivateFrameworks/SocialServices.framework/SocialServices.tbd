@@ -9,4 +9,8 @@ objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
     objc-classes:         [ SLGoogleAuthController ]
+    objc-ivars:           [ SLGoogleAuthController._account,
+                            SLGoogleAuthController._accountStore,
+                            SLGoogleAuthController._authenticationSession,
+                            SLGoogleAuthController._presentationBlock ]
 ...

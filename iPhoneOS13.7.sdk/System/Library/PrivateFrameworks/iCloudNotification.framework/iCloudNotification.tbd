@@ -19,4 +19,10 @@ exports:
                             __INLogSystem ]
     objc-classes:         [ INDaemonConnection, INDaemonInterface,
                             INDiagnosticReport, INManagedDefaults ]
+    objc-ivars:           [ INDaemonConnection._connection,
+                            INDiagnosticReport._disabled,
+                            INDiagnosticReport._nextHeartbeatDate,
+                            INDiagnosticReport._pushEnvironment,
+                            INDiagnosticReport._pushToken,
+                            INDiagnosticReport._pushTopics ]
 ...

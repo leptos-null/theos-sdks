@@ -12,4 +12,8 @@ exports:
     objc-classes:         [ EAEmailAddressGenerator, EAEmailAddressLists,
                             EAEmailAddressParser, EAEmailAddressSet,
                             _EAEmailAddress, _EAEmailAddressSetEnumerator ]
+    objc-ivars:           [ EAEmailAddressSet._internalSet,
+                            _EAEmailAddress._emailAddress,
+                            _EAEmailAddressSetEnumerator._set,
+                            _EAEmailAddressSetEnumerator._state ]
 ...

@@ -16,4 +16,13 @@ exports:
                             _kAPRIntentStreamUpdateInterfaceMachServiceName ]
     objc-classes:         [ APRAppPreferenceClient, APRAppPreferenceResponse,
                             APRAppPreferenceTypes, APRIntentStreamUpdateClient ]
+    objc-ivars:           [ APRAppPreferenceClient._xpcConnection,
+                            APRAppPreferenceResponse._ABGroup,
+                            APRAppPreferenceResponse._atxResponse,
+                            APRAppPreferenceResponse._engagedBundleId,
+                            APRAppPreferenceResponse._engagementType,
+                            APRAppPreferenceResponse._experience,
+                            APRAppPreferenceResponse._feedbackSource,
+                            APRAppPreferenceResponse._intentType,
+                            APRIntentStreamUpdateClient._xpcConnection ]
 ...

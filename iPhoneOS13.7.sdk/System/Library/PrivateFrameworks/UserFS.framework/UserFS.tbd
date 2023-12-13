@@ -10,4 +10,11 @@ exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
     objc-classes:         [ LiveFSUSBLocalStorageClient, UserFSFile, UserFSFolder,
                             UserFSItem, UserFSStream, UserFSVolume ]
+    objc-ivars:           [ UserFSItem._createdDate, UserFSItem._isDirectory,
+                            UserFSItem._length, UserFSItem._locked,
+                            UserFSItem._modifiedDate, UserFSItem._name,
+                            UserFSItem._path, UserFSItem._volume,
+                            UserFSStream._connection, UserFSStream._item,
+                            UserFSStream._length, UserFSVolume._connection,
+                            UserFSVolume._deviceName, UserFSVolume._isLocked ]
 ...

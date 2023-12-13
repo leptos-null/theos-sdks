@@ -14,4 +14,10 @@ exports:
                             CLKCComplicationBundleDataSource,
                             CLKCComplicationBundleDataSourceContainer,
                             CLKCComplicationDataSource ]
+    objc-ivars:           [ CLKCBundleComplication._appBundleIdentifier,
+                            CLKCBundleComplication._bundleIdentifier,
+                            CLKCComplicationDataSource._complication,
+                            CLKCComplicationDataSource._delegate,
+                            CLKCComplicationDataSource._device,
+                            CLKCComplicationDataSource._family ]
 ...

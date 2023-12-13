@@ -14,4 +14,9 @@ exports:
                             _SpotlightReceiverVersionString,
                             _SpotlightSenderEntitlement ]
     objc-classes:         [ CSRecieverConnection ]
+    objc-ivars:           [ CSRecieverConnection._INIntentClassNames,
+                            CSRecieverConnection._bundleIDs,
+                            CSRecieverConnection._contentTypes,
+                            CSRecieverConnection._receiver,
+                            CSRecieverConnection._supportedJobs ]
 ...

@@ -34,4 +34,19 @@ exports:
                             _kMAOptionsBAAValidity, _kMAOptionsBasebandWaitCount,
                             _kMAOptionsResuseExistingKey,
                             _kMAOptionsUseSoftwareGeneratedKey ]
+    objc-classes:         [ DeviceTypeDeviceIdentity, GestaltHlpr ]
+    objc-ivars:           [ DeviceTypeDeviceIdentity._device_class,
+                            DeviceTypeDeviceIdentity._hardware_model,
+                            DeviceTypeDeviceIdentity._has_internal_diagnostics,
+                            DeviceTypeDeviceIdentity._has_telephony,
+                            DeviceTypeDeviceIdentity._is_audio_accessory,
+                            DeviceTypeDeviceIdentity._is_dev_board,
+                            DeviceTypeDeviceIdentity._is_devfused_undemoted,
+                            DeviceTypeDeviceIdentity._is_fpga,
+                            DeviceTypeDeviceIdentity._is_internal_build,
+                            DeviceTypeDeviceIdentity._is_ipad,
+                            DeviceTypeDeviceIdentity._is_ipod,
+                            DeviceTypeDeviceIdentity._is_prodfused_demoted,
+                            DeviceTypeDeviceIdentity._product_type,
+                            DeviceTypeDeviceIdentity._should_hactivate ]
 ...

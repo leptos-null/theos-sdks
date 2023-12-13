@@ -8,10 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ AppPredictionInternal, CarPlay, SUIATPTests, SUICITests,
-                            SUIIPSWTests, SUIInternalTests, SUISWETests,
-                            SharingViewService, UserNotificationsServer,
-                            examplenotificationd, untool ]
     symbols:              [ _UNUserNotificationSettingsServiceName,
                             _UserNotificationsSettingsVersionNumber,
                             _UserNotificationsSettingsVersionString ]
@@ -22,6 +18,21 @@ exports:
                             UNNotificationTopicSettings,
                             UNUserNotificationSettingsService,
                             UNUserNotificationSettingsServiceConnection ]
-    objc-ivars:           [ UNNotificationSystemSettings._announcementSetting,
-                            UNNotificationSystemSettings._showPreviewsSetting ]
+    objc-ivars:           [ UNNotificationSettingsCenter._delegate,
+                            UNNotificationSource._displayName,
+                            UNNotificationSource._icon,
+                            UNNotificationSource._isHiddenFromSettings,
+                            UNNotificationSource._sourceIdentifier,
+                            UNNotificationSource._sourceSettings,
+                            UNNotificationSourceSettings._isRestricted,
+                            UNNotificationSourceSettings._notificationSettings,
+                            UNNotificationSourceSettings._topicSettings,
+                            UNNotificationSystemSettings._announcementSetting,
+                            UNNotificationSystemSettings._showPreviewsSetting,
+                            UNNotificationTopicSettings._topic,
+                            UNNotificationTopicSettings._topicSettings,
+                            UNUserNotificationSettingsServiceConnection._callOutQueue,
+                            UNUserNotificationSettingsServiceConnection._connection,
+                            UNUserNotificationSettingsServiceConnection._observers,
+                            UNUserNotificationSettingsServiceConnection._queue ]
 ...

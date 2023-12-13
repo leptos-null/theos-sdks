@@ -8126,4 +8126,8 @@ exports:
                             SAWristDetectionStatusClientState,
                             SAiCloudGetiCloudInformation,
                             SAiCloudiCloudInformation ]
+    objc-ivars:           [ AceObject._aceId, AceObject._deserializationDuration,
+                            AceObject._dict, AceObject._mutatingCommand,
+                            AceObject._plistData, AceObject._refId,
+                            AceObject._usefulnessScore ]
 ...

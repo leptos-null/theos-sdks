@@ -1,17 +1,46 @@
 --- !tapi-tbd-v3
-archs:           [ armv7, armv7s, arm64, arm64e ]
-uuids:           [ 'armv7: D1166C69-DEB5-3CC4-900B-81DA10713DF0', 'armv7s: D4A65312-8A89-3B65-9C22-3330A61699C7', 
-                   'arm64: FBC0F7FF-6C44-3EFA-8C77-67C228259608', 'arm64e: 1BF938BE-F280-3308-B8E9-ADC9BCB33536' ]
-platform:        ios
-install-name:    '/System/Library/Frameworks/HealthKitUI.framework/HealthKitUI'
-exports:         
-  - archs:           [ armv7, armv7s ]
-    symbols:         [ _HKRingPercentageValueNoRing ]
-    objc-classes:    [ HKAnimatableObject, HKAnimatableObjectPropertyAnimation, HKCGPointPropertyAnimation, 
-                       HKFloatPropertyAnimation, HKMetricColors, HKRingGroupController, 
-                       HKRingsView, _HKAnimatableProperty, _HKIcon, _HKRing ]
-  - archs:           [ armv7, armv7s, arm64, arm64e ]
-    symbols:         [ _HKGLViewSnapshottingDidEndNotification, _HKGLViewSnapshottingWillBeginNotification, 
-                       _HKHealthKitUIFrameworkBundle, _HKScrollPerformanceOptionCategoryKey ]
-    objc-classes:    [ HKActivityRingView, HKGLView ]
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/HealthKitUI.framework/HealthKitUI
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _HKGLViewSnapshottingDidEndNotification,
+                            _HKGLViewSnapshottingWillBeginNotification,
+                            _HKHealthKitUIFrameworkBundle,
+                            _HKScrollPerformanceOptionCategoryKey ]
+    objc-classes:         [ HKActivityRingView, HKGLView,
+                            _HKActivityRingViewSizingDirective, _HKShapeView ]
+    objc-ivars:           [ HKActivityRingView._activitySummary,
+                            HKActivityRingView._emptyRingAlpha,
+                            HKActivityRingView._maskView,
+                            HKActivityRingView._renderer,
+                            HKActivityRingView._ringInsetPercentage,
+                            HKActivityRingView._ringsView,
+                            HKActivityRingView._shouldBypassApplicationStateChecking,
+                            HKGLView._context, HKGLView._contextPushed,
+                            HKGLView._depthRenderbuffer, HKGLView._displayLink,
+                            HKGLView._displayLinkPaused,
+                            HKGLView._drawableDepthFormat,
+                            HKGLView._drawableHeight, HKGLView._drawableWidth,
+                            HKGLView._lastUpdateTime, HKGLView._latestDrawError,
+                            HKGLView._multisampleColorRenderbuffer,
+                            HKGLView._multisampleFramebuffer,
+                            HKGLView._preferredFramesPerSecond,
+                            HKGLView._resolveColorRenderbuffer,
+                            HKGLView._resolveFramebuffer, HKGLView._screen,
+                            HKGLView._shouldBypassApplicationStateChecking,
+                            HKGLView._shouldDeleteFramebuffer,
+                            HKGLView._synchronizesWithCA, HKGLView._use4XMSAA,
+                            HKGLView._viewIsVisible,
+                            HKGLView._viewSnapshottingActive,
+                            HKGLView._viewWillMoveToWindow,
+                            _HKActivityRingViewSizingDirective._identifier,
+                            _HKActivityRingViewSizingDirective._outerRingOffset,
+                            _HKActivityRingViewSizingDirective._ringInterspacing,
+                            _HKActivityRingViewSizingDirective._ringThickness,
+                            _HKActivityRingViewSizingDirective._width ]
 ...

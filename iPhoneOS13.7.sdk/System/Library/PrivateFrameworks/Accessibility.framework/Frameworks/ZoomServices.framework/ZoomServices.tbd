@@ -22,4 +22,15 @@ exports:
                             _ZWAttributeKeyZoomFrame, _ZWAttributeKeyZoomLevel,
                             _ZoomServicesPrimaryZoomWindowClientIdentifier ]
     objc-classes:         [ AXZoomListenerContainer, ZoomServices ]
+    objc-ivars:           [ AXZoomListenerContainer.handler,
+                            AXZoomListenerContainer.identifier,
+                            ZoomServices._registeredForZoomAttributeListeners,
+                            ZoomServices._registeredForZoomListener,
+                            ZoomServices._shouldRegisterForZoomListeners,
+                            ZoomServices._showingZoomLens,
+                            ZoomServices._springBoardReady,
+                            ZoomServices._triedToShowLensBeofreSBReady,
+                            ZoomServices._zoomAttributeListeners,
+                            ZoomServices._zoomListeners,
+                            ZoomServices._zoomWindowClient ]
 ...

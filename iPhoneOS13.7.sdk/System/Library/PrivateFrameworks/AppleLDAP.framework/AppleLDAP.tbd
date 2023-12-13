@@ -40,4 +40,5 @@ exports:
                             _ldap_operation_query_page,
                             _ldap_operation_query_remaining,
                             _ldap_operation_release, _ldap_operation_retain ]
+    objc-classes:         [ OS_ldap_connection, OS_ldap_operation ]
 ...

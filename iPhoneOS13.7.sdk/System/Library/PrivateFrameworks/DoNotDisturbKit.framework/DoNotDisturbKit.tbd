@@ -8,8 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ DoNotDisturbKitTests, DoNotDisturbModule, NanoSettings,
-                            NanoSettingsGlance, SpringBoard, SpringBoardCore ]
     symbols:              [ _DNDEndOfEventAssertionIdentifier,
                             _DNDKitRegisterLogging, _DNDLogLocation,
                             _DNDLogNotifications, _DNDOneHourLifetimeIdentifier,
@@ -21,4 +19,37 @@ exports:
                             _kLOIHighConfidence ]
     objc-classes:         [ DNDAWDMetricsService, DNDLifetimeDetails,
                             DNDLifetimeDetailsProvider, DNDNotificationsService ]
+    objc-ivars:           [ DNDAWDMetricsService._currentState,
+                            DNDAWDMetricsService._lockState,
+                            DNDAWDMetricsService._notificationsStateService,
+                            DNDAWDMetricsService._queue,
+                            DNDLifetimeDetails._identifier,
+                            DNDLifetimeDetails._metadata,
+                            DNDLifetimeDetails._name,
+                            DNDLifetimeDetailsProvider._availableLifetimeDetails,
+                            DNDLifetimeDetailsProvider._calendarVisibilityManager,
+                            DNDLifetimeDetailsProvider._calloutQueue,
+                            DNDLifetimeDetailsProvider._currentPlaceInference,
+                            DNDLifetimeDetailsProvider._delegate,
+                            DNDLifetimeDetailsProvider._eventStore,
+                            DNDLifetimeDetailsProvider._eventStoreQueue,
+                            DNDLifetimeDetailsProvider._locationManager,
+                            DNDLifetimeDetailsProvider._monitoringLifetimes,
+                            DNDLifetimeDetailsProvider._queue,
+                            DNDLifetimeDetailsProvider._relevantEvent,
+                            DNDNotificationsService._basicActive,
+                            DNDNotificationsService._bedtimeActive,
+                            DNDNotificationsService._currentBehaviorSettings,
+                            DNDNotificationsService._currentPhoneCallBypassSettings,
+                            DNDNotificationsService._currentState,
+                            DNDNotificationsService._doNotDisturbActive,
+                            DNDNotificationsService._drivingActive,
+                            DNDNotificationsService._longestAssertionMetadata,
+                            DNDNotificationsService._notificationsAssertionService,
+                            DNDNotificationsService._notificationsCenter,
+                            DNDNotificationsService._notificationsSettingsService,
+                            DNDNotificationsService._notificationsStateService,
+                            DNDNotificationsService._queue,
+                            DNDNotificationsService._sleepActive,
+                            DNDNotificationsService._workoutActive ]
 ...

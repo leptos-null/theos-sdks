@@ -16,4 +16,13 @@ exports:
     objc-classes:         [ RMUIDetailEditorViewController, RMUIImageUtilities,
                             RMUIUpNextCell, RMUIUpNextLabel,
                             RMUIUpNextRowSeparator, RemindersColor ]
+    objc-ivars:           [ RMUIUpNextCell._circleImageView,
+                            RMUIUpNextCell._contentView,
+                            RMUIUpNextCell._locationLabel,
+                            RMUIUpNextCell._primaryVibrantView,
+                            RMUIUpNextCell._rowSeparator,
+                            RMUIUpNextCell._secondaryVibrantView,
+                            RMUIUpNextCell._tertiaryVibrantView,
+                            RMUIUpNextCell._timeLabel,
+                            RMUIUpNextCell._titleLabel ]
 ...

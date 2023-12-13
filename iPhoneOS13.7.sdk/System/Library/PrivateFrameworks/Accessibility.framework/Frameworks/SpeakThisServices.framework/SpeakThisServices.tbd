@@ -12,4 +12,8 @@ exports:
                             _STSMessageKeyAppPointY, _STSMessageKeyKBFrame,
                             _STSMessageKeyOptions, _STSMessageReplyKeyErrorCode ]
     objc-classes:         [ SpeakThisServices ]
+    objc-ivars:           [ SpeakThisServices._client,
+                            SpeakThisServices._errorHandlerFromPriorShowControllerAttempt,
+                            SpeakThisServices._springBoardReady,
+                            SpeakThisServices._triedToShowSpeechControllerBeforeSBReady ]
 ...

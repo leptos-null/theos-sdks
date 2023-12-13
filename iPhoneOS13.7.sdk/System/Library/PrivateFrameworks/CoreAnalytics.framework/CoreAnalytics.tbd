@@ -93,4 +93,12 @@ exports:
                             _report_locale_prefs_to_analyticsd ]
     objc-classes:         [ AnalyticsConfigurationObserver,
                             AnalyticsEventObserver ]
+    objc-ivars:           [ AnalyticsConfigurationObserver._delegate,
+                            AnalyticsConfigurationObserver._delegateQueue,
+                            AnalyticsConfigurationObserver._queue,
+                            AnalyticsConfigurationObserver.observer,
+                            AnalyticsEventObserver._delegate,
+                            AnalyticsEventObserver._delegateQueue,
+                            AnalyticsEventObserver._queue,
+                            AnalyticsEventObserver.observer ]
 ...

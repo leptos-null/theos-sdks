@@ -49,4 +49,17 @@ exports:
                             _PFLGaussianNoiseGenerator, _PFLLog, _PFLMathHelper,
                             _PFLModelTrainer, _PFLPrivacyParameters,
                             _PFLRejectionSampling, _PFLVectorPrivatizer ]
+    objc-ivars:           [ _PFLGaussianNoiseGenerator._deviation,
+                            _PFLGaussianNoiseGenerator._mean,
+                            _PFLModelTrainer._imageCount, _PFLModelTrainer._mlp,
+                            _PFLModelTrainer._task,
+                            _PFLPrivacyParameters._dimension,
+                            _PFLPrivacyParameters._identifier,
+                            _PFLPrivacyParameters._maxRejection,
+                            _PFLPrivacyParameters._minCDProduct,
+                            _PFLPrivacyParameters._normmax,
+                            _PFLPrivacyParameters._precision,
+                            _PFLPrivacyParameters._reconstructionProbability,
+                            _PFLPrivacyParameters._rho, _PFLVectorPrivatizer._nu,
+                            _PFLVectorPrivatizer._r ]
 ...

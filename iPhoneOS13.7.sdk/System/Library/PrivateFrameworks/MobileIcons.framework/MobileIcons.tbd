@@ -50,4 +50,14 @@ exports:
                             __Z22CA_CFDictionarySetBoolP14__CFDictionaryPK10__CFStringb,
                             _use_scaler_for_statistics ]
     objc-classes:         [ LICacheClearScheduler ]
+    objc-ivars:           [ LICacheClearScheduler._clearHandler,
+                            LICacheClearScheduler._delay,
+                            LICacheClearScheduler._holdTransaction,
+                            LICacheClearScheduler._memoryPreasure,
+                            LICacheClearScheduler._memoryPreasureState,
+                            LICacheClearScheduler._object,
+                            LICacheClearScheduler._queue,
+                            LICacheClearScheduler._timer,
+                            LICacheClearScheduler._timerFired,
+                            LICacheClearScheduler._transaction ]
 ...

@@ -14,4 +14,26 @@ exports:
                             _AXTapToSpeakTimeVersionString ]
     objc-classes:         [ AXTapToSpeakTimeManager, AXTapticChimeAsset,
                             AXTapticChimesScheduler, AXTimeOutputPreferences ]
+    objc-ivars:           [ AXTapToSpeakTimeManager._cachedRingerIsMuted,
+                            AXTapToSpeakTimeManager._dateFormatter,
+                            AXTapToSpeakTimeManager._lastMediaVolume,
+                            AXTapToSpeakTimeManager._queue,
+                            AXTapToSpeakTimeManager._ringerStateNotifyToken,
+                            AXTapToSpeakTimeManager._tapticTimeManager,
+                            AXTapToSpeakTimeManager._vsSpeechSynthesizer,
+                            AXTapticChimeAsset._audioFilePath,
+                            AXTapticChimeAsset._hapticDictionary,
+                            AXTapticChimeAsset._prePlayTimeInterval,
+                            AXTapticChimeAsset._volume,
+                            AXTapticChimesScheduler._audioPlaybackPowerAssertionID,
+                            AXTapticChimesScheduler._audioPlayer,
+                            AXTapticChimesScheduler._chimeTimer,
+                            AXTapticChimesScheduler._currentChimeAsset,
+                            AXTapticChimesScheduler._lastActualChimeTime,
+                            AXTapticChimesScheduler._lastActualWakeTime,
+                            AXTapticChimesScheduler._lastExpectedChimeTime,
+                            AXTapticChimesScheduler._lastExpectedWakeTime,
+                            AXTapticChimesScheduler._lastMediaVolume,
+                            AXTapticChimesScheduler._previousAudioSessionCategory,
+                            AXTimeOutputPreferences._domainAccessor ]
 ...

@@ -16,4 +16,22 @@ exports:
                             _nar_workspace_log ]
     objc-classes:         [ NARApplication, NARApplicationState,
                             NARApplicationWorkspace, NARGlance, NARWorkspaceInfo ]
+    objc-ivars:           [ NARApplication._appState, NARApplication._appTags,
+                            NARApplication._iTunesPlistStrings,
+                            NARApplication._infoPlist,
+                            NARApplication._launchServicesBundleType,
+                            NARApplication._localizedStrings,
+                            NARApplication._parentApplicationBundleIdentifier,
+                            NARApplication._sequenceNumber,
+                            NARApplication._supportsForegroundApplication,
+                            NARApplicationState._removedSystemApp,
+                            NARApplicationState._restricted,
+                            NARApplicationWorkspace._connection,
+                            NARApplicationWorkspace._queue, NARGlance._appID,
+                            NARGlance._displayName, NARGlance._glanceID,
+                            NARGlance._localizedDisplayNameMap,
+                            NARWorkspaceInfo._UUID,
+                            NARWorkspaceInfo._applications,
+                            NARWorkspaceInfo._sequenceNumber,
+                            NARWorkspaceInfo._standaloneGlances ]
 ...

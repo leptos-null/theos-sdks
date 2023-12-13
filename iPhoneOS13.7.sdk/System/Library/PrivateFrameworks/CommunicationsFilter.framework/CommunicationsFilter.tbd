@@ -20,5 +20,20 @@ exports:
                             _CMFSyncAgentBlockListUpdated, _CMFXPCEventCode,
                             _CMFXPCParameterKeyItem, _CMFXPCResponseKey,
                             _CreateCMFItemFromString ]
-    objc-classes:         [ CommunicationFilterItem ]
+    objc-classes:         [ CommunicationFilterItem,
+                            CommunicationFilterItemCache,
+                            CommunicationsFilterBlockList,
+                            CommunicationsFilterBlockListCache ]
+    objc-ivars:           [ CommunicationFilterItem._emailAddress,
+                            CommunicationFilterItem._phoneNumber,
+                            CommunicationFilterItemCache._filterItem,
+                            CommunicationFilterItemCache._isInList,
+                            CommunicationsFilterBlockList._cache,
+                            CommunicationsFilterBlockList._connection,
+                            CommunicationsFilterBlockList._queue,
+                            CommunicationsFilterBlockList._recentObjectsTested,
+                            CommunicationsFilterBlockList._retries,
+                            CommunicationsFilterBlockListCache._listIsEmpty,
+                            CommunicationsFilterBlockListCache._notifyEmptyListToken,
+                            CommunicationsFilterBlockListCache._recentItems ]
 ...

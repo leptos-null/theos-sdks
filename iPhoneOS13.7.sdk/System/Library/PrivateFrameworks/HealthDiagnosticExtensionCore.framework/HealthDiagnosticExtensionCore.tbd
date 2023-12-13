@@ -14,4 +14,15 @@ exports:
                             HDDatabaseDiagnosticOperation, HDDiagnosticExtension,
                             HDDiagnosticOperation, HDNanoSyncDiagnosticOperation,
                             HDWorkoutCondenserDiagnosticOperation ]
+    objc-ivars:           [ HDDiagnosticExtension._allowsSensitiveAttachments,
+                            HDDiagnosticExtension._captureStartTime,
+                            HDDiagnosticExtension._collectionLog,
+                            HDDiagnosticExtension._contentProtectionNotifyToken,
+                            HDDiagnosticExtension._logQueue,
+                            HDDiagnosticExtension._temporaryDirectoryURL,
+                            HDDiagnosticOperation._attachmentDirectoryURL,
+                            HDDiagnosticOperation._attachments,
+                            HDDiagnosticOperation._delegate,
+                            HDDiagnosticOperation._queue,
+                            HDDiagnosticOperation._reportContents ]
 ...

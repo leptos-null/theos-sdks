@@ -166,4 +166,5 @@ exports:
                             _kMobileKeyBagLockStatusNotifyToken,
                             _kMobileKeyBagUserChangedNotificationToken,
                             _kMobileKeyBagUserStartedNotificationToken ]
+    objc-classes:         [ MKBKeyStoreDevice, UMPersonaMachPort ]
 ...

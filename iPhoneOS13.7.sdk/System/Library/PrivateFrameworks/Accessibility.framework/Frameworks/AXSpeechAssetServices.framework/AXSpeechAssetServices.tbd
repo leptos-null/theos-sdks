@@ -14,4 +14,13 @@ exports:
                             AXSpeechAssetMonitorHelper,
                             AXSpeechPronunciationHelper,
                             AXSpeechPronunciationOptions ]
+    objc-ivars:           [ AXSettingsVoiceAssetManager._delegates,
+                            AXSettingsVoiceAssetManager._reachability,
+                            AXSettingsVoiceAssetManager._samplePlayer,
+                            AXSpeechAssetMonitorHelper._lastVoiceAssetUpdateTime,
+                            AXSpeechAssetMonitorHelper._reachability,
+                            AXSpeechPronunciationHelper._inSession,
+                            AXSpeechPronunciationHelper._resultCallback,
+                            AXSpeechPronunciationOptions._language,
+                            AXSpeechPronunciationOptions._orthography ]
 ...

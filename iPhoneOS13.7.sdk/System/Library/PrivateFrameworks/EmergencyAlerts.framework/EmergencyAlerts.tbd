@@ -22,4 +22,6 @@ exports:
                             _kEADefaultMaxDuration ]
     objc-classes:         [ EACellBroadcastMessageListener,
                             EAEmergencyAlertCenter ]
+    objc-ivars:           [ EACellBroadcastMessageListener._emergencyAlertCenter,
+                            EAEmergencyAlertCenter._userNotificationCenter ]
 ...

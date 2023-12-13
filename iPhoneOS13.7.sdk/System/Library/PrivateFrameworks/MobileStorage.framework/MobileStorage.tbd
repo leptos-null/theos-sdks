@@ -45,4 +45,5 @@ exports:
                             _kMobileStorageSupportsContentProtection,
                             _kPTPCameraAttachedNotification,
                             _kStorageMounterName ]
+    objc-classes:         [ PlistProcessor ]
 ...

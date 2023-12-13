@@ -124,6 +124,17 @@ exports:
                             _kNLTextSlotParserReferenceDateKey,
                             _kNLTextSlotParserResourceDirectoryLocationKey,
                             _kNLTransliteratorTargetLocaleKey ]
-    objc-classes:         [ NLParsecDataManager, NLSearchParserManager,
-                            QuickTypePFLData, QuickTypePFLTrainer ]
+    objc-classes:         [ NLPOIEntry, NLPOIEntryImpl, NLParsecDataManager,
+                            NLSearchParserManager, QuickTypePFLData,
+                            QuickTypePFLTrainer ]
+    objc-ivars:           [ NLPOIEntry.m_impl, NLPOIEntryImpl._category,
+                            NLPOIEntryImpl._domain, NLPOIEntryImpl._has,
+                            NLPOIEntryImpl._name, NLPOIEntryImpl._score,
+                            NLParsecDataManager.m_entries,
+                            NLSearchParserManager._parser,
+                            QuickTypePFLData._maxSequenceLength,
+                            QuickTypePFLTrainer._batchSize,
+                            QuickTypePFLTrainer._learningRate,
+                            QuickTypePFLTrainer._maxSequenceLength,
+                            QuickTypePFLTrainer._updatedModelPath ]
 ...

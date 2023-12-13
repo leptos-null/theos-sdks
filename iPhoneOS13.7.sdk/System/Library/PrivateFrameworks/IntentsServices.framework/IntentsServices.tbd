@@ -19,4 +19,13 @@ exports:
                             _IntentsServicesVersionNumber,
                             _IntentsServicesVersionString ]
     objc-classes:         [ INSAnalytics, INSExtensionService ]
+    objc-ivars:           [ INSAnalytics._dataSource,
+                            INSAnalytics._observerQueue, INSAnalytics._observers,
+                            INSExtensionService._currentBundleIdForDisplay,
+                            INSExtensionService._currentConnection,
+                            INSExtensionService._delegate,
+                            INSExtensionService._extensionContext,
+                            INSExtensionService._options,
+                            INSExtensionService._queue,
+                            INSExtensionService._requestDelegateQueue ]
 ...

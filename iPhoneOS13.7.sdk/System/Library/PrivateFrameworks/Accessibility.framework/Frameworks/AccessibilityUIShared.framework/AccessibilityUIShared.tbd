@@ -27,4 +27,13 @@ exports:
                             __AXUIServiceName ]
     objc-classes:         [ AXUIMessageContext, AXUIMessageReplyHandler,
                             AXUIMessageSender ]
+    objc-ivars:           [ AXUIMessageContext._completion,
+                            AXUIMessageContext._completionRequiresWritingBlock,
+                            AXUIMessageContext._context,
+                            AXUIMessageContext._targetAccessQueue,
+                            AXUIMessageContext._xpcMessage,
+                            AXUIMessageSender._delegate,
+                            AXUIMessageSender._messageQueue,
+                            AXUIMessageSender._messageSchedulingSerializationQueue,
+                            AXUIMessageSender._sendingMessage ]
 ...

@@ -77,4 +77,22 @@ exports:
                             __AXAssertIsThread, __AXAssertIsThreadNamed ]
     objc-classes:         [ AXAccessQueue, AXAccessQueueTimer, AXDispatchTimer,
                             AXXPCUtilities ]
+    objc-ivars:           [ AXAccessQueue._concurrentQueue,
+                            AXAccessQueue._specialBehaviors,
+                            AXAccessQueue._threadLocalStorageKey,
+                            AXAccessQueueTimer._accessQueue,
+                            AXAccessQueueTimer._accessQueueIsExternal,
+                            AXAccessQueueTimer._active,
+                            AXAccessQueueTimer._automaticallyCancelPendingBlockUponSchedulingNewBlock,
+                            AXAccessQueueTimer._dispatchTimer,
+                            AXAccessQueueTimer._label, AXAccessQueueTimer._state,
+                            AXDispatchTimer._active,
+                            AXDispatchTimer._automaticallyCancelPendingBlockUponSchedulingNewBlock,
+                            AXDispatchTimer._cancelBlock,
+                            AXDispatchTimer._cancelled,
+                            AXDispatchTimer._dispatchQueue,
+                            AXDispatchTimer._dispatchTimer,
+                            AXDispatchTimer._label, AXDispatchTimer._pending,
+                            AXDispatchTimer._processBlock,
+                            AXDispatchTimer._useWallTime ]
 ...

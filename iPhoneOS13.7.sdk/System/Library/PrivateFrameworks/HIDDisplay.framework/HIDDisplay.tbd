@@ -56,4 +56,17 @@ exports:
                             HIDDisplayIOReportingInterface, HIDDisplayInterface,
                             HIDDisplayPresetData, HIDDisplayPresetInterface,
                             HIDDisplayUserAdjustmentInterface ]
+    objc-ivars:           [ HIDDisplayDeviceManagementInterface._usageElementMap,
+                            HIDDisplayIOReportingInterface._dataHandler,
+                            HIDDisplayIOReportingInterface._queue,
+                            HIDDisplayIOReportingInterface._usageElementMap,
+                            HIDDisplayInterface._containerID,
+                            HIDDisplayInterface._deviceRef,
+                            HIDDisplayInterface._manager,
+                            HIDDisplayInterface._registryID,
+                            HIDDisplayPresetData._deviceRef,
+                            HIDDisplayPresetData._index,
+                            HIDDisplayPresetInterface._presets,
+                            HIDDisplayPresetInterface._usageElementMap,
+                            HIDDisplayUserAdjustmentInterface._usageElementMap ]
 ...

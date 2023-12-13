@@ -12,4 +12,13 @@ exports:
                             _CoreCDPUIInternalVersionString ]
     objc-classes:         [ CDPRecoveryTestController,
                             DummyRemoteDeviceSecretValidator, SettingsController ]
+    objc-ivars:           [ CDPRecoveryTestController._mockDevices,
+                            CDPRecoveryTestController._navController,
+                            CDPRecoveryTestController._recoveryController,
+                            DummyRemoteDeviceSecretValidator._expectedString,
+                            DummyRemoteDeviceSecretValidator._failedAttempts,
+                            SettingsController._didUseSMS,
+                            SettingsController._recoveryController,
+                            SettingsController._recoveryTestController,
+                            SettingsController._uiController ]
 ...

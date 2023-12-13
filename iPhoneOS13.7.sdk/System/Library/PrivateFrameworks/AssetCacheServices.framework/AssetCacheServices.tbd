@@ -45,4 +45,22 @@ exports:
     objc-classes:         [ ACSURLSession, ACSURLSessionDataTask,
                             ACSURLSessionDownloadTask, ACSURLSessionTask,
                             ACSURLSessionUploadTask ]
+    objc-ivars:           [ ACSURLSession.__clientDelegate,
+                            ACSURLSession.__clientDelegateOpQueue,
+                            ACSURLSession.__locateOptions,
+                            ACSURLSession.__logHandle,
+                            ACSURLSession.__nsurlSession, ACSURLSession.__phase,
+                            ACSURLSession.__queue, ACSURLSession.__tasks,
+                            ACSURLSession._canUseCachingServer,
+                            ACSURLSessionDataTask.__clientDataCompletionHandler,
+                            ACSURLSessionDownloadTask.__clientLocationCompletionHandler,
+                            ACSURLSessionDownloadTask.__deferredLinkError,
+                            ACSURLSessionDownloadTask.__resumedOriginalRequest,
+                            ACSURLSessionTask.__failBackToOrigin,
+                            ACSURLSessionTask.__nsurlTaskCreator,
+                            ACSURLSessionTask.__nsurlTaskToCachingServer,
+                            ACSURLSessionTask.__nsurlTaskToOrigin,
+                            ACSURLSessionTask.__suspended,
+                            ACSURLSessionTask.__tryCachingServer,
+                            ACSURLSessionTask.__weakSession ]
 ...

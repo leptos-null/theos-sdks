@@ -11,4 +11,6 @@ exports:
     symbols:              [ _OSASubmissionClientVersionNumber,
                             _OSASubmissionClientVersionString ]
     objc-classes:         [ OSASubmissionClient ]
+    objc-ivars:           [ OSASubmissionClient._connection,
+                            OSASubmissionClient._synchRemoteObjectProxy ]
 ...

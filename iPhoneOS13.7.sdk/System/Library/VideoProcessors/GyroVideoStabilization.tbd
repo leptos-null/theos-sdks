@@ -1,0 +1,73 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/VideoProcessors/GyroVideoStabilization.videoprocessor
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _FigSampleBufferProcessorCreateForGyroVideoStabilization ]
+    objc-classes:         [ AContext, AFilter, EAffineXform ]
+    objc-ivars:           [ AContext._GPUMode, AContext._GPUOutputMode,
+                            AContext._bgraRect, AContext._blockOnLastBuffer,
+                            AContext._chromaQuadVertices, AContext._chromaRect,
+                            AContext._chromaTexture, AContext._currentFilter,
+                            AContext._directFBO, AContext._directTexture,
+                            AContext._fillExtendedRowsInOutputBuffer,
+                            AContext._fillExtendedRowsKernel, AContext._filters,
+                            AContext._finishTransactionsSynchronously,
+                            AContext._framebuffer, AContext._glContext,
+                            AContext._glFence, AContext._lastInputBuffer,
+                            AContext._lumaQuadVertices, AContext._lumaRect,
+                            AContext._lumaTexture, AContext._metal,
+                            AContext._outputSurfaceCache, AContext._pixelFormat,
+                            AContext._renderbuffer, AContext._singlePlane,
+                            AContext._size, AContext._surfaceCache,
+                            AContext._uniformChroma, AContext._uniformLuma,
+                            AContext._wasSinglePlane, AFilter._bgraProgram,
+                            AFilter._blurUniforms, AFilter._chromaBlurProgram,
+                            AFilter._chromaProgram,
+                            AFilter._chromaWithClippingProgram,
+                            AFilter._glContext, AFilter._lumaBlurProgram,
+                            AFilter._lumaProgram,
+                            AFilter._lumaWithClippingProgram, AFilter._uniforms,
+                            AFilter.m_angle, EAffineXform._AUSMLumaSharpProgram,
+                            EAffineXform._AUSMSharpLutHeight,
+                            EAffineXform._AUSMSharpLutTexture,
+                            EAffineXform._AUSMSharpLutWidth,
+                            EAffineXform._TexMatCount, EAffineXform._TexMats,
+                            EAffineXform._USMChromaProgram,
+                            EAffineXform._USMv10LumaDownSampleProgram,
+                            EAffineXform._USMv10LumaSharpProgram,
+                            EAffineXform._USMv15LumaSharpProgram,
+                            EAffineXform._USMv20LumaSharpProgram,
+                            EAffineXform._ausmBlurRadius,
+                            EAffineXform._ausmHighLumaDelta,
+                            EAffineXform._ausmHighLumaDeltaBlurAmount,
+                            EAffineXform._ausmLowLumaDelta,
+                            EAffineXform._ausmLowLumaDeltaBlurAmount,
+                            EAffineXform._blurEnabled,
+                            EAffineXform._blurMixEnabled,
+                            EAffineXform._blurNoiseRadius,
+                            EAffineXform._blurPasses,
+                            EAffineXform._blurTempBuffer,
+                            EAffineXform._frameCount,
+                            EAffineXform._lastUnsharpHeight,
+                            EAffineXform._lastUnsharpWidth,
+                            EAffineXform._overscanForBlur,
+                            EAffineXform._overscanHeight,
+                            EAffineXform._overscanWidth,
+                            EAffineXform._previousBlurBuffers,
+                            EAffineXform._previousBufferIndex,
+                            EAffineXform._renderFromTopLeft,
+                            EAffineXform._renderMethod,
+                            EAffineXform._transformRowStride,
+                            EAffineXform._unsharpHeight,
+                            EAffineXform._unsharpTexture,
+                            EAffineXform._unsharpWidth,
+                            EAffineXform._usmAdaptiveAmount,
+                            EAffineXform._usmBaseAmount,
+                            EAffineXform._usmBlurRadius ]
+...

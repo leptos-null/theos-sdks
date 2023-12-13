@@ -719,6 +719,14 @@ exports:
     objc-classes:         [ APCarPlayPolicyMonitor, APCarPlayPreferences,
                             APEndpointManagerCarPlayDelegate,
                             APEndpointStreamScreenAVCWrapper ]
-    objc-ivars:           [ APEndpointStreamScreenAVCWrapper._avcVideoStream,
+    objc-ivars:           [ APCarPlayPolicyMonitor._delegate,
+                            APCarPlayPolicyMonitor._monitor,
+                            APCarPlayPolicyMonitor._observedEndpoint,
+                            APCarPlayPolicyMonitor._queue,
+                            APCarPlayPolicyMonitor._weakEndpoint,
+                            APCarPlayPreferences._delegate,
+                            APCarPlayPreferences._preferences,
+                            APEndpointManagerCarPlayDelegate._weakManager,
+                            APEndpointStreamScreenAVCWrapper._avcVideoStream,
                             APEndpointStreamScreenAVCWrapper._clientPID ]
 ...

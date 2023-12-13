@@ -133,4 +133,11 @@ exports:
                             _my_CFUUIDStringCreate, _my_FieldSetRetainedCFType,
                             _peap_introspect, _print_bytes, _print_bytes_cfstr,
                             _print_data, _print_data_cfstr, _sockaddr_dl_print ]
+    objc-classes:         [ SIMStatusIndicator ]
+    objc-ivars:           [ SIMStatusIndicator._applicationContext,
+                            SIMStatusIndicator._callback,
+                            SIMStatusIndicator._coreTelephonyClient,
+                            SIMStatusIndicator._queue,
+                            SIMStatusIndicator._runloop,
+                            SIMStatusIndicator._runloopMode ]
 ...

@@ -18,4 +18,16 @@ exports:
     objc-classes:         [ ATXNotificationsAggregateLogger,
                             ATXNotificationsInterface,
                             ATXNotificationsLoggingClient ]
+    objc-ivars:           [ ATXNotificationsAggregateLogger._rttFromTracker,
+                            ATXNotificationsAggregateLogger._rttSelectionTracker,
+                            ATXNotificationsInterface._feed,
+                            ATXNotificationsInterface._message,
+                            ATXNotificationsInterface._numSuppActions,
+                            ATXNotificationsInterface._publicationDate,
+                            ATXNotificationsInterface._sectionID,
+                            ATXNotificationsInterface._subtitle,
+                            ATXNotificationsInterface._title,
+                            ATXNotificationsInterface._topic,
+                            ATXNotificationsLoggingClient._logger,
+                            ATXNotificationsLoggingClient._xpcConnection ]
 ...

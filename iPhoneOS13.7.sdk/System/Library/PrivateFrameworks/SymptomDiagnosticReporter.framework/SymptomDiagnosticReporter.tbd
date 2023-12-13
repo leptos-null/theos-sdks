@@ -159,4 +159,7 @@ exports:
                             _kSymptomDiagnosticTypeOperational,
                             _kSymptomDiagnosticTypePerformance ]
     objc-classes:         [ SDRDiagnosticReporter ]
+    objc-ivars:           [ SDRDiagnosticReporter._connection,
+                            SDRDiagnosticReporter._delegate,
+                            SDRDiagnosticReporter._queue ]
 ...

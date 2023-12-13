@@ -13,4 +13,8 @@ exports:
                             _XCTSharedDaemonConnectionProvider, _XCTTBDefaultLog,
                             _XCTTargetBootstrap, _XCTUnderlyingErrorsKey ]
     objc-classes:         [ XCTDaemonConnectionProvider, XCTTargetSession ]
+    objc-ivars:           [ XCTTargetSession._clientListener,
+                            XCTTargetSession._connectionHandler,
+                            XCTTargetSession._daemonConnection,
+                            XCTTargetSession._queue ]
 ...

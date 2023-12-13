@@ -11,4 +11,10 @@ exports:
     symbols:              [ _AdPlatformsInternalVersionNumber,
                             _AdPlatformsInternalVersionString ]
     objc-classes:         [ ADAttributionRequester, ADAttributionService ]
+    objc-ivars:           [ ADAttributionRequester._bundleID,
+                            ADAttributionRequester._connection,
+                            ADAttributionRequester._transactionToken,
+                            ADAttributionService._clients,
+                            ADAttributionService._listener,
+                            ADAttributionService._transactionID ]
 ...

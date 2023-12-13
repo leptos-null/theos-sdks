@@ -11,4 +11,9 @@ exports:
     symbols:              [ _AdPlatformsVersionNumber, _AdPlatformsVersionString ]
     objc-classes:         [ ADAttribution, ADStatusConditionRateLimitedObject,
                             ADStatusConditions, ADStatusConditionsImpl ]
+    objc-ivars:           [ ADAttribution._hasCompletedResponse,
+                            ADAttribution._numRetries,
+                            ADStatusConditionRateLimitedObject._operation,
+                            ADStatusConditionRateLimitedObject._setTime,
+                            ADStatusConditionRateLimitedObject._statusCondition ]
 ...

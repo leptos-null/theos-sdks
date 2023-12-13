@@ -12,4 +12,12 @@ exports:
                             _AccessoryAssistiveTouchVersionString ]
     objc-classes:         [ ACCAssistiveTouchAccessory,
                             ACCAssistiveTouchProvider ]
+    objc-ivars:           [ ACCAssistiveTouchAccessory._accessoryUID,
+                            ACCAssistiveTouchAccessory._desiredAssistiveTouchState,
+                            ACCAssistiveTouchProvider._accessories,
+                            ACCAssistiveTouchProvider._cachedState,
+                            ACCAssistiveTouchProvider._delegate,
+                            ACCAssistiveTouchProvider._providerUID,
+                            ACCAssistiveTouchProvider._remoteObject,
+                            ACCAssistiveTouchProvider._serverConnection ]
 ...

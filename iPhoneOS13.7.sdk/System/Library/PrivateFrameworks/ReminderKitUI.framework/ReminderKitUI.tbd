@@ -13,4 +13,19 @@ exports:
     objc-classes:         [ REMReminderCreationContext,
                             REMReminderCreationRemoteViewController,
                             REMReminderCreationViewController ]
+    objc-ivars:           [ REMReminderCreationContext._dueDateComponents,
+                            REMReminderCreationContext._location,
+                            REMReminderCreationContext._locationProximity,
+                            REMReminderCreationContext._locationString,
+                            REMReminderCreationContext._notes,
+                            REMReminderCreationContext._siriFoundInAppsData,
+                            REMReminderCreationContext._title,
+                            REMReminderCreationContext._titleIsGeneratedSuggestion,
+                            REMReminderCreationContext._url,
+                            REMReminderCreationContext._userActivity,
+                            REMReminderCreationContext._wantsExtendedDetailOnlyView,
+                            REMReminderCreationRemoteViewController._publicViewController,
+                            REMReminderCreationViewController._childViewController,
+                            REMReminderCreationViewController._deferredErrorDuringPresentation,
+                            REMReminderCreationViewController._delegate ]
 ...

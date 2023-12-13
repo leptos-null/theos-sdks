@@ -935,4 +935,7 @@ exports:
                             _wifi_manager_unschedule_unused_network_geotags_removal_test,
                             _wifi_manager_update_network ]
     objc-classes:         [ WiFiPasswordSharingSimulator ]
+    objc-ivars:           [ WiFiPasswordSharingSimulator._queue,
+                            WiFiPasswordSharingSimulator._replyHandler,
+                            WiFiPasswordSharingSimulator._service ]
 ...

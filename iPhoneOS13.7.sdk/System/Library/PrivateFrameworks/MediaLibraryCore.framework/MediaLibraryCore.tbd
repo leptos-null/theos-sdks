@@ -2764,6 +2764,7 @@ exports:
                             __ZNK6mlcore19ComparisonPredicateIxE11descriptionEv,
                             __ZNK6mlcore19ComparisonPredicateIxE5valueEv,
                             __ZNK6mlcore19ComparisonPredicateIxE8propertyEv,
+                            __ZNSt3__111char_traitsIcE2eqEcc,
                             __ZNSt3__117__call_once_proxyINS_5tupleIJOZN6mlcore16TypedEntityClassINS2_10ItemArtistEE13sharedPointerEvEUlvE_EEEEEvPv,
                             __ZNSt3__117__call_once_proxyINS_5tupleIJOZN6mlcore16TypedEntityClassINS2_12ArtworkTokenEE13sharedPointerEvEUlvE_EEEEEvPv,
                             __ZNSt3__117__call_once_proxyINS_5tupleIJOZN6mlcore16TypedEntityClassINS2_12BaseLocationEE13sharedPointerEvEUlvE_EEEEEvPv,

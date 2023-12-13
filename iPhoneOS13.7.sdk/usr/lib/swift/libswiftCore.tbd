@@ -5,7 +5,6 @@ flags:                 [ flat_namespace ]
 install-name:          /usr/lib/swift/libswiftCore.dylib
 current-version:       1103.2.25
 compatibility-version: 1
-swift-abi-version:     6
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
@@ -11228,7 +11227,8 @@ exports:
                             _$sypN, _$sytN, _$sytWV, _$syyXEWV, _$syyXfWV, _$syycWV,
                             __SwiftCreateBridgedArray,
                             __SwiftCreateBridgedMutableArray,
-                            __SwiftCreateBridgedString,
+                            __SwiftCreateBridgedString, ___eqdf2, ___eqsf2, ___gtdf2,
+                            ___gtsf2, ___ltdf2, ___ltsf2, ___nedf2, ___nesf2,
                             ___swift_stdlib_u_charAge,
                             ___swift_stdlib_u_charName,
                             ___swift_stdlib_u_getIntPropertyValue,
@@ -11488,21 +11488,41 @@ exports:
                             _swift_weakTakeAssign, _swift_weakTakeInit,
                             _swift_weakTakeStrong, _swift_willThrow ]
     objc-classes:         [ _TtCs12_SwiftObject, _TtCs15__RawSetStorage,
-                            _TtCs18__SwiftNativeNSSet,
+                            _TtCs15__StringStorage, _TtCs18__SwiftNativeNSSet,
                             _TtCs19__EmptyArrayStorage,
                             _TtCs19__EmptySetSingleton,
                             _TtCs20_SwiftNSMutableArray,
                             _TtCs20__SwiftNativeNSArray,
+                            _TtCs21__SharedStringStorage,
+                            _TtCs21__SwiftNativeNSString,
                             _TtCs22__RawDictionaryStorage,
                             _TtCs22__SwiftDeferredNSArray,
+                            _TtCs24__SwiftEmptyNSEnumerator,
                             _TtCs25__SwiftNativeNSDictionary,
+                            _TtCs25__SwiftNativeNSEnumerator,
                             _TtCs26_SwiftNativeNSMutableArray,
                             _TtCs26__EmptyDictionarySingleton,
                             _TtCs28__ContiguousArrayStorageBase,
+                            _TtCs32__stdlib_ReturnAutoreleasedDummy,
                             _TtCs41__SwiftNativeNSArrayWithContiguousStorage,
+                            __SwiftNSErrorLayoutStandin,
                             __SwiftNativeNSArrayBase,
                             __SwiftNativeNSDictionaryBase,
-                            __SwiftNativeNSEnumeratorBase,
+                            __SwiftNativeNSEnumeratorBase, __SwiftNativeNSError,
                             __SwiftNativeNSMutableArrayBase,
-                            __SwiftNativeNSSetBase, __SwiftNativeNSStringBase ]
+                            __SwiftNativeNSSetBase, __SwiftNativeNSStringBase,
+                            __SwiftNull, __SwiftValue ]
+    objc-ivars:           [ _TtCs12_SwiftObject.isa,
+                            _TtCs12_SwiftObject.refCounts,
+                            __SwiftNSErrorLayoutStandin._code,
+                            __SwiftNSErrorLayoutStandin._domain,
+                            __SwiftNSErrorLayoutStandin._reserved,
+                            __SwiftNSErrorLayoutStandin._userInfo,
+                            __SwiftNativeNSArrayBase.refCounts,
+                            __SwiftNativeNSDictionaryBase.refCounts,
+                            __SwiftNativeNSEnumeratorBase.refCounts,
+                            __SwiftNativeNSMutableArrayBase.refCounts,
+                            __SwiftNativeNSSetBase.refCounts,
+                            __SwiftNativeNSStringBase.refCounts,
+                            __SwiftNull.depth ]
 ...

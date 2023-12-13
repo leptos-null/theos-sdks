@@ -11,4 +11,14 @@ exports:
     symbols:              [ _MetricKitCoreVersionNumber,
                             _MetricKitCoreVersionString ]
     objc-classes:         [ MXCore, MXCorePayloadConstructor, MXSource ]
+    objc-ivars:           [ MXCore._MXCoreLogHandle,
+                            MXCore._MXCoreXcodeSupportLogHandle,
+                            MXCore._clientDictionary,
+                            MXCore._currentDataActivityDate,
+                            MXCore._currentDataActivityRetryCount,
+                            MXCore._iVarQueue, MXCore._requestQueue,
+                            MXCore._services, MXCore._source, MXCore._xpcListener,
+                            MXSource._MXSourceLogHandle, MXSource._fileManager,
+                            MXSource._iVarQueue, MXSource._requestQueue,
+                            MXSource._xpcListener ]
 ...

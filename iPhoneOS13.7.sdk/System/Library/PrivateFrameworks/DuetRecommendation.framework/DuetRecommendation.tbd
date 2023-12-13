@@ -14,4 +14,21 @@ exports:
                             _DRTopicActionEntry, _DRTopicEnumerationQuery,
                             _DRTopicInterestModel, _DRTopicInterestSummary,
                             _DRTopicStatisticsQuery ]
+    objc-ivars:           [ _DRInMemoryTopicInterestModel._summary,
+                            _DRInMemoryTopicInterestModel._syncQueue,
+                            _DRInMemoryTopicInterestModel._topics,
+                            _DRTopicActionEntry._action,
+                            _DRTopicActionEntry._topic,
+                            _DRTopicActionEntry._when,
+                            _DRTopicEnumerationQuery._defaultQueue,
+                            _DRTopicEnumerationQuery._limit,
+                            _DRTopicEnumerationQuery._predicate,
+                            _DRTopicEnumerationQuery._topicEnumerator,
+                            _DRTopicInterestModel._storage,
+                            _DRTopicInterestModel._syncQueue,
+                            _DRTopicInterestSummary._topicPresentationsCount,
+                            _DRTopicInterestSummary._topicSelectionsCount,
+                            _DRTopicStatisticsQuery._defaultQueue,
+                            _DRTopicStatisticsQuery._predicate,
+                            _DRTopicStatisticsQuery._summary ]
 ...

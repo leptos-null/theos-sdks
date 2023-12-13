@@ -10,15 +10,17 @@ exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
     symbols:              [ _AWDGCKSubmitLinkStatusMetric,
                             _GKSSubmitAWDMetricsFromGameD ]
-    objc-classes:         [ AWDAdaptor, AWDStats ]
+    objc-classes:         [ AWDAdaptor, AWDHistogram, AWDStats, AudioTier,
+                            AudioTierHistogram ]
     objc-ivars:           [ AWDAdaptor._RTStatsReceived, AWDAdaptor._awdstat,
                             AWDAdaptor._callStarted,
                             AWDAdaptor._frameErasureRateArray,
                             AWDAdaptor._jitterBufferResidencyTimeArray,
                             AWDAdaptor._jitterBufferUnderflowRateArray,
                             AWDAdaptor._rtpPacketLossRateArray,
-                            AWDAdaptor._videoQualityTimers,
-                            AWDStats.ActualRxBitrateHistogram,
+                            AWDAdaptor._videoQualityTimers, AWDHistogram.buckets,
+                            AWDHistogram.floatBuckets, AWDHistogram.histogram,
+                            AWDHistogram.size, AWDStats.ActualRxBitrateHistogram,
                             AWDStats.NOWRDHistogram, AWDStats.PLICounter,
                             AWDStats.PLRHistogram, AWDStats.RTCPSendInterval,
                             AWDStats.RTTHistogram,
@@ -88,5 +90,12 @@ exports:
                             AWDStats.txHeight, AWDStats.txWidth,
                             AWDStats.uplinkEstimateAvg,
                             AWDStats.uplinkEstimateAvgCount, AWDStats.videoFlush,
-                            AWDStats.videoPauseTime, AWDStats.videoStallDuration ]
+                            AWDStats.videoPauseTime, AWDStats.videoStallDuration,
+                            AudioTier.bundling, AudioTier.codecBitrate,
+                            AudioTier.codecPayload, AudioTier.duplication,
+                            AudioTier.duration, AudioTier.mode, AudioTier.tier,
+                            AudioTierHistogram.awdAudioTierQueue,
+                            AudioTierHistogram.currentTier,
+                            AudioTierHistogram.histogram,
+                            AudioTierHistogram.startTime ]
 ...

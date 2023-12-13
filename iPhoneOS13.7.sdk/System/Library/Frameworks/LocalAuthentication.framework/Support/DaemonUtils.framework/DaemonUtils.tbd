@@ -1,0 +1,40 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/LocalAuthentication.framework/Support/DaemonUtils.framework/DaemonUtils
+current-version:       693.140.3
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _LANVRAMNamespaceStartupManager, __libBiometricKit ]
+    objc-classes:         [ BiometryHelper, Caller, CredentialRequest, DaemonUtils,
+                            EvaluationRequest, InstalledAppsCache, LANVRAM,
+                            PushButtonMonitor, Request ]
+    objc-ivars:           [ BiometryHelper._biometryRunning,
+                            BiometryHelper._biometryType,
+                            BiometryHelper._databaseHashesByUserId,
+                            BiometryHelper._device, BiometryHelper._identities,
+                            Caller._connection, Caller._connection2, Caller._event,
+                            CredentialRequest._credentialData,
+                            CredentialRequest._credentialType,
+                            CredentialRequest._readOnly,
+                            DaemonUtils._serverQueue, EvaluationRequest._acl,
+                            EvaluationRequest._aclOperation,
+                            EvaluationRequest._options,
+                            EvaluationRequest._policy,
+                            EvaluationRequest._purpose,
+                            InstalledAppsCache._appCache,
+                            InstalledAppsCache._nameCache,
+                            InstalledAppsCache._pluginCache,
+                            InstalledAppsCache._siriExtensions,
+                            PushButtonMonitor._delegate,
+                            PushButtonMonitor._doubleTapDetected,
+                            PushButtonMonitor._lastDoubleTap,
+                            PushButtonMonitor._lastTap,
+                            PushButtonMonitor._sbBiometricsService,
+                            Request._cachedValues, Request._caller,
+                            Request._heldObjects, Request._identifier,
+                            Request._interactive, Request._log, Request._received ]
+...

@@ -14,7 +14,9 @@ exports:
                             _GPURawCounterVersionString ]
     objc-classes:         [ GPURawCounterSelect, _GPURawCounter,
                             _GPURawCounterSource, _GPURawCounterSourceGroup ]
-    objc-ivars:           [ _GPURawCounter._counterValueType,
+    objc-ivars:           [ GPURawCounterSelect._name,
+                            GPURawCounterSelect._width,
+                            _GPURawCounter._counterValueType,
                             _GPURawCounter._description, _GPURawCounter._name,
                             _GPURawCounterSource._name,
                             _GPURawCounterSource._sourceGroup,

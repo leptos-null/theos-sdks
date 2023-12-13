@@ -38,4 +38,9 @@ exports:
                             __stringForValidationEvent ]
     objc-classes:         [ AXFBFakeProcess, AXFBFakeProcessState,
                             AXFrontBoardProcessWatcher ]
+    objc-ivars:           [ AXFBFakeProcess._bundleIdentifier,
+                            AXFBFakeProcess._state, AXFBFakeProcessState._pid,
+                            AXFrontBoardProcessWatcher._appTransitionTimer,
+                            AXFrontBoardProcessWatcher._cachedFocusedAppPIDs,
+                            AXFrontBoardProcessWatcher._observerToken ]
 ...

@@ -19,4 +19,13 @@ exports:
                             _pbb_manualunpairing_log, _pbb_mobileasset_log,
                             _pbb_setup_log, _pbb_setupflow_log, _pbb_shared_log ]
     objc-classes:         [ PPDiscoveryManager, PPNearbyWatchNotifier ]
+    objc-ivars:           [ PPDiscoveryManager._bluetoothIsScanning,
+                            PPDiscoveryManager._central,
+                            PPDiscoveryManager._discoveryDelegate,
+                            PPDiscoveryManager._discoveryQueue,
+                            PPDiscoveryManager._signalLimitOverride,
+                            PPNearbyWatchNotifier._discoveryCompletion,
+                            PPNearbyWatchNotifier._discoveryManager,
+                            PPNearbyWatchNotifier._notificationService,
+                            PPNearbyWatchNotifier._timerSource ]
 ...

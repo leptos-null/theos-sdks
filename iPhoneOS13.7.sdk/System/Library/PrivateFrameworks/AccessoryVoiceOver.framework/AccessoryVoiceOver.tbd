@@ -30,4 +30,11 @@ exports:
                             _AccessoryVoiceOverVersionNumber,
                             _AccessoryVoiceOverVersionString ]
     objc-classes:         [ ACCVoiceOverAccessory, ACCVoiceOverProvider ]
+    objc-ivars:           [ ACCVoiceOverAccessory._accessoryUID,
+                            ACCVoiceOverAccessory._desiredVoiceOverState,
+                            ACCVoiceOverProvider._accessories,
+                            ACCVoiceOverProvider._delegate,
+                            ACCVoiceOverProvider._providerUID,
+                            ACCVoiceOverProvider._remoteObject,
+                            ACCVoiceOverProvider._serverConnection ]
 ...

@@ -18,4 +18,21 @@ exports:
                             _DictionaryUIVersionString ]
     objc-classes:         [ DUDefinitionDictionary, DUDefinitionValue,
                             DUDictionaryManager, DUEntryViewController ]
+    objc-ivars:           [ DUDefinitionDictionary._activated,
+                            DUDefinitionDictionary._assetToUpgrade,
+                            DUDefinitionDictionary._definitionLanguage,
+                            DUDefinitionDictionary._dictionary,
+                            DUDefinitionDictionary._isAppleDictionary,
+                            DUDefinitionDictionary._isTTYDictionary,
+                            DUDefinitionDictionary._progress,
+                            DUDefinitionDictionary._rawAsset,
+                            DUDefinitionValue._definition,
+                            DUDefinitionValue._definitionElements,
+                            DUDefinitionValue._foundRecordRefs,
+                            DUDefinitionValue._localizedDictionaryName,
+                            DUDefinitionValue._longDefinition,
+                            DUDefinitionValue._rawAsset, DUDefinitionValue._term,
+                            DUDictionaryManager._availableDefinitionDictionaries,
+                            DUDictionaryManager._initiallyEmptyAssets,
+                            DUEntryViewController._definitionValue ]
 ...

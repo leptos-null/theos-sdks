@@ -23,4 +23,9 @@ exports:
                             _kACSESavedPublicIPAddressRangesKey,
                             _kACSESavedServersKey, _kACSESharedCachingKey ]
     objc-classes:         [ AssetCacheServicesReporter ]
+    objc-ivars:           [ AssetCacheServicesReporter._allServerHostPorts,
+                            AssetCacheServicesReporter._logHandle,
+                            AssetCacheServicesReporter._results,
+                            AssetCacheServicesReporter._weakDelegate,
+                            AssetCacheServicesReporter._weakDelegateQueue ]
 ...

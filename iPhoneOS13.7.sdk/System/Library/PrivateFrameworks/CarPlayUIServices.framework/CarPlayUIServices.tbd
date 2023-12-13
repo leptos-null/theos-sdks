@@ -29,4 +29,14 @@ exports:
                             CRSUITemplateDashboardWidgetSceneSettings,
                             CRSUITemplateDashboardWidgetSceneSpecification,
                             CRSUIWindow ]
+    objc-ivars:           [ CRSDashboardFocusableItem._focusProvidingItem,
+                            CRSDashboardFocusableItem._frameInWindow,
+                            CRSDashboardFocusableItem._identifier,
+                            CRSUIDashboardWidgetWindow._dashboardWindowServiceConnection,
+                            CRSUIDashboardWidgetWindow._focusableItems,
+                            CRSUIDashboardWidgetWindow._widgetSizes,
+                            CRSUIWindow._bannerHeight,
+                            CRSUIWindow._heightConstraint,
+                            CRSUIWindow._notificationLayoutGuide,
+                            CRSUIWindow._settingsDiffInspector ]
 ...

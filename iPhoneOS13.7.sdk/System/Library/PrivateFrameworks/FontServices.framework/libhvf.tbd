@@ -43,4 +43,7 @@ exports:
                             __ZTVN3hvf8RendererE, __ZTVN4Util14MemoryResourceE,
                             __ZTVN4Util16StackMemResourceE ]
     objc-classes:         [ HVFPartTransform, HVFRenderer ]
+    objc-ivars:           [ HVFPartTransform._transform,
+                            HVFPartTransform.axisValues, HVFRenderer.hvfb,
+                            HVFRenderer.renderer ]
 ...

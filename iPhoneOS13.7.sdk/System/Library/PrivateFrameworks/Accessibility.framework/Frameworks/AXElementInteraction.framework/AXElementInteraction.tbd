@@ -11,4 +11,10 @@ exports:
     symbols:              [ _AXAXElementInteractionVersionNumber,
                             _AXAXElementInteractionVersionString ]
     objc-classes:         [ AXElementInteractionManager ]
+    objc-ivars:           [ AXElementInteractionManager._axEventObserver,
+                            AXElementInteractionManager._client,
+                            AXElementInteractionManager._delegate,
+                            AXElementInteractionManager._displayCursor,
+                            AXElementInteractionManager._focusedElement,
+                            AXElementInteractionManager._interactionEnabled ]
 ...

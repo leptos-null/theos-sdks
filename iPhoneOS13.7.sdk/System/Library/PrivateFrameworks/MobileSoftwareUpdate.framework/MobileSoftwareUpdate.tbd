@@ -89,4 +89,6 @@ exports:
                             _kMSUUpdateToleratedStepValueUnrecognizedStep,
                             _kMSUUpdateToleratedStepValueUpdateBaseband ]
     objc-classes:         [ MSUUpdateBrainAssetLoader, MSUUpdateBrainLoader ]
+    objc-ivars:           [ MSUUpdateBrainAssetLoader._updateAsset,
+                            MSUUpdateBrainLoader._attributesDict ]
 ...

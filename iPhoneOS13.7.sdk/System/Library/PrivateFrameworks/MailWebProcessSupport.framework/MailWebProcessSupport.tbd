@@ -19,4 +19,10 @@ exports:
                             _kNodeExtrasSourceLength, _kRangeExtrasSource,
                             _kRangeExtrasSourceLength ]
     objc-classes:         [ MSComposeBundlePageController ]
+    objc-ivars:           [ MSComposeBundlePageController._blocksToPerformOnPage,
+                            MSComposeBundlePageController._controller,
+                            MSComposeBundlePageController._jsBodyField,
+                            MSComposeBundlePageController._jsContext,
+                            MSComposeBundlePageController._performOnPageSuspendCount,
+                            MSComposeBundlePageController._plugIn ]
 ...

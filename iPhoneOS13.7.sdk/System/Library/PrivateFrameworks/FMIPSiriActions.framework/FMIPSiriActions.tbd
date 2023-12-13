@@ -11,4 +11,6 @@ exports:
     symbols:              [ _LogCategory_Unspecified ]
     objc-classes:         [ FMIPLocateIntent, FMIPLocateIntentResponse,
                             FMIPPlaySoundIntent, FMIPPlaySoundIntentResponse ]
+    objc-ivars:           [ FMIPLocateIntentResponse._code,
+                            FMIPPlaySoundIntentResponse._code ]
 ...

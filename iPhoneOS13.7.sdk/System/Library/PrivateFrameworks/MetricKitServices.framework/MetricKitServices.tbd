@@ -11,4 +11,9 @@ exports:
     symbols:              [ _MetricKitServicesVersionNumber,
                             _MetricKitServicesVersionString ]
     objc-classes:         [ MXPowerlogService, MXService, MXUtilities ]
+    objc-ivars:           [ MXPowerlogService._MXPowerLogServiceLogHandle,
+                            MXPowerlogService._powerlogDataPaths,
+                            MXPowerlogService._requestQueue,
+                            MXPowerlogService._unarchivedPowerlogData,
+                            MXService._isStarted, MXService._sourceID ]
 ...

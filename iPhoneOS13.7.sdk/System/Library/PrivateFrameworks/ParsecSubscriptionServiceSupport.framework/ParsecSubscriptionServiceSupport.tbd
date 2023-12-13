@@ -12,4 +12,6 @@ exports:
                             _ParsecSubscriptionServiceSupportVersionString ]
     objc-classes:         [ PSSSSubscriptionManager,
                             PSSSSubscriptionManagerInternal ]
+    objc-ivars:           [ PSSSSubscriptionManager._registrationCenter,
+                            PSSSSubscriptionManagerInternal._registrationCenter ]
 ...

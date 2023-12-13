@@ -10,6 +10,20 @@ exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
     symbols:              [ _PURemoteActionToString,
                             _kPUDidRemoveLockoutNotification, _pu_log ]
-    objc-classes:         [ PUConnection, PUError, PURemoteDeviceState,
-                            PURemotePasscodePolicy ]
+    objc-classes:         [ PUConnection, PUConnectionUnlockClient, PUError,
+                            PURemoteDeviceState, PURemotePasscodePolicy ]
+    objc-ivars:           [ PUConnection._delegate, PUConnection._delegateQueue,
+                            PUConnection._remoteDeviceRemoveLockoutHandler,
+                            PUConnection._serverConnection,
+                            PUConnection._serverConnectionQueue,
+                            PUConnection._unlockClient,
+                            PUConnectionUnlockClient._connection,
+                            PURemoteDeviceState._passcodeLocked,
+                            PURemoteDeviceState._passcodePolicy,
+                            PURemoteDeviceState._passcodeSet,
+                            PURemoteDeviceState._unlockOnly,
+                            PURemoteDeviceState._version,
+                            PURemoteDeviceState._wristDetectEnabled,
+                            PURemotePasscodePolicy._modificationAllowed,
+                            PURemotePasscodePolicy._passcodeMinimumLength ]
 ...

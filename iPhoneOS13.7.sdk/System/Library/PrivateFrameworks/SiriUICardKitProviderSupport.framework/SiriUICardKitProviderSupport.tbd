@@ -16,4 +16,11 @@ exports:
                             SCKPMediaControlCardSectionView,
                             SCKPMediaControlCardSectionViewController,
                             SCKPProvider ]
+    objc-ivars:           [ SCKPCardSectionViewProvider._card,
+                            SCKPCardSectionViewProvider._viewConfigurations,
+                            SCKPMediaControlCardSectionView._contentView,
+                            SCKPMediaControlCardSectionViewController._assistantSecurityConnection,
+                            SCKPMediaControlCardSectionViewController._cardSection,
+                            SCKPMediaControlCardSectionViewController._mediaPlatterViewController,
+                            SCKPMediaControlCardSectionViewController.cardSectionViewControllingDelegate ]
 ...

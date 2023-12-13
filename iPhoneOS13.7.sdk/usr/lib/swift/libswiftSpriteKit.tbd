@@ -5,7 +5,6 @@ flags:                 [ flat_namespace ]
 install-name:          /usr/lib/swift/libswiftSpriteKit.dylib
 current-version:       0
 compatibility-version: 1
-swift-abi-version:     6
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
@@ -25,4 +24,5 @@ exports:
                             _$sSo9SKTextureC9SpriteKitE25customPlaygroundQuickLooks01_efG0OvpMV,
                             _$sSo9SKTextureCs30_CustomPlaygroundQuickLookable9SpriteKitMc,
                             __swift_FORCE_LOAD_$_swiftSpriteKit ]
+    objc-classes:         [ _TtC9SpriteKit25__SpriteKitMethodProvider ]
 ...

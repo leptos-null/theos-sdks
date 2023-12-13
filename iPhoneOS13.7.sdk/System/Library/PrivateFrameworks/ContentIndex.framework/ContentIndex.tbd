@@ -25,4 +25,11 @@ exports:
                             _CXQueryNodeCreateIntersection,
                             _CXQueryNodeCreateNegation, _CXQueryNodeCreateUnion,
                             _CXSetLoggingBlock, _kCXQueryOptionValueListKey ]
+    objc-classes:         [ CXIndex, CXQuery ]
+    objc-ivars:           [ CXIndex._cancel, CXIndex._path, CXIndex._skRef,
+                            CXQuery._batch, CXQuery._batchOffset,
+                            CXQuery._batchValues, CXQuery._canceled,
+                            CXQuery._complete, CXQuery._index, CXQuery._job,
+                            CXQuery._resultQueue, CXQuery._semaphore,
+                            CXQuery._siQuery, CXQuery._started, CXQuery._waiting ]
 ...

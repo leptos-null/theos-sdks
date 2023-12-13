@@ -24,4 +24,5 @@ exports:
                             _kCPMLTimeSinceLastUsed, _kCPMLUUID,
                             _kCPMLWifiCondition ]
     objc-classes:         [ CPMLBestAppShim, CPMLBestShim, CPMLBestShimContext ]
+    objc-ivars:           [ CPMLBestShimContext.orderedSuggestions ]
 ...

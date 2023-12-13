@@ -119,4 +119,9 @@ exports:
                             _kCFACCNowPlaying_SubscriberList_PlaybackAttributes,
                             _kCFACCNowPlaying_SubscriberList_PlaybackQueueList ]
     objc-classes:         [ AccessoryNowPlayingClient ]
+    objc-ivars:           [ AccessoryNowPlayingClient._delegate,
+                            AccessoryNowPlayingClient._remoteObject,
+                            AccessoryNowPlayingClient._serverConnection,
+                            AccessoryNowPlayingClient._shouldSendArtwork,
+                            AccessoryNowPlayingClient._subscriberList ]
 ...

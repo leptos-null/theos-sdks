@@ -49,4 +49,6 @@ exports:
                             __ZN2AD8DatabaseC2Ev, __ZN2AD8DatabaseD1Ev,
                             __ZN2AD8DatabaseD2Ev ]
     objc-classes:         [ ADHistory, ADHistoryDistributionEnumerator ]
+    objc-ivars:           [ ADHistory._database, ADHistory._path,
+                            ADHistoryDistributionEnumerator._iterator ]
 ...

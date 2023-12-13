@@ -29,5 +29,10 @@ exports:
                             _g_uiState, _s_mediaSafetyNetQueue ]
     objc-classes:         [ MSNCarPlay, MSNScopedException,
                             MSNScopedExceptionsServer, MSNTTR ]
-    objc-ivars:           [ MSNScopedExceptionsServer._listener ]
+    objc-ivars:           [ MSNCarPlay._carplayConnected, MSNCarPlay._cmSession,
+                            MSNScopedException._connection,
+                            MSNScopedException._exception,
+                            MSNScopedExceptionsServer._activeExceptions,
+                            MSNScopedExceptionsServer._listener,
+                            MSNScopedExceptionsServer._queue, MSNTTR._url ]
 ...

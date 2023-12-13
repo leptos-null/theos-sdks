@@ -13,4 +13,8 @@ exports:
                             _mapLIIconVariantToNRG, _mapNRGIconVariantToLI,
                             _nrg_daemon_log, _nrg_framework_log ]
     objc-classes:         [ NRGResourceCache, NanoResourceGrabber ]
+    objc-ivars:           [ NanoResourceGrabber._connectionMayBeValid,
+                            NanoResourceGrabber._iconCacheQueue,
+                            NanoResourceGrabber._nrgdConnection,
+                            NanoResourceGrabber._queue ]
 ...

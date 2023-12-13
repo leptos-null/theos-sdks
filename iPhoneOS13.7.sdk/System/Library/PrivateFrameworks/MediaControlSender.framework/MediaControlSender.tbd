@@ -50,7 +50,9 @@ exports:
                             _gVideoPlugin_SetPropertyFunc ]
     objc-classes:         [ AirPlayController, AirPlayRemoteSlideshow,
                             MediaControlClient ]
-    objc-ivars:           [ AirPlayRemoteSlideshow._client,
+    objc-ivars:           [ AirPlayController._cnx, AirPlayController._queue,
+                            AirPlayController._xpcName,
+                            AirPlayRemoteSlideshow._client,
                             AirPlayRemoteSlideshow._delegate,
                             AirPlayRemoteSlideshow._internalQueue,
                             AirPlayRemoteSlideshow._startTime,

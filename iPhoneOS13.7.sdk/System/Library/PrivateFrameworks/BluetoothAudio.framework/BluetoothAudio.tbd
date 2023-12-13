@@ -41,4 +41,10 @@ exports:
                             _kBluetoothEndpointDescriptionProperty_SupportedFormats,
                             _staticManager ]
     objc-classes:         [ BluetoothBridge ]
+    objc-ivars:           [ BluetoothBridge._connectedSemaphore,
+                            BluetoothBridge._deviceDiscovery,
+                            BluetoothBridge._disconnectedSemaphore,
+                            BluetoothBridge._manager, BluetoothBridge._queue,
+                            BluetoothBridge._session,
+                            BluetoothBridge._targetUserSession ]
 ...

@@ -19,4 +19,5 @@ exports:
                             _downsample_6x6_6Hx48W_N64 ]
     objc-classes:         [ VPPresenterView, VPScannerView,
                             VPScannerViewController ]
+    objc-ivars:           [ VPPresenterView._flags ]
 ...

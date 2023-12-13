@@ -18,4 +18,8 @@ exports:
                             _kCFAccessoryHID_Report, _kCFAccessoryHID_ReportID,
                             _kCFAccessoryHID_ReportType ]
     objc-classes:         [ AccessoryHIDClient ]
+    objc-ivars:           [ AccessoryHIDClient._delegate,
+                            AccessoryHIDClient._registeredHIDDescriptors,
+                            AccessoryHIDClient._remoteObject,
+                            AccessoryHIDClient._serverConnection ]
 ...

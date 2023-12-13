@@ -19,4 +19,14 @@ exports:
                             __TVRemoteItemModelUUIDKey ]
     objc-classes:         [ TVRemoteAction, TVRemoteActionGroup,
                             _TVRXPCProtocolManager, _TVRemoteItemModel ]
+    objc-ivars:           [ TVRemoteAction._handler, TVRemoteAction._icon,
+                            TVRemoteAction._remoteItemTitle,
+                            TVRemoteActionGroup._icon,
+                            TVRemoteActionGroup._remoteItemTitle,
+                            TVRemoteActionGroup._remoteItems,
+                            _TVRemoteItemModel._group, _TVRemoteItemModel._icon,
+                            _TVRemoteItemModel._item,
+                            _TVRemoteItemModel._itemType,
+                            _TVRemoteItemModel._items, _TVRemoteItemModel._title,
+                            _TVRemoteItemModel._uuid ]
 ...

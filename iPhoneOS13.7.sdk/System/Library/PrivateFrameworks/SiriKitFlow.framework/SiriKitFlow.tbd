@@ -5,42 +5,9 @@ flags:                 [ flat_namespace ]
 install-name:          /System/Library/PrivateFrameworks/SiriKitFlow.framework/SiriKitFlow
 current-version:       1
 compatibility-version: 1
-swift-abi-version:     6
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ AudioFlowDelegatePlugin,
-                            AudioFlowDelegatePluginTests,
-                            ContactsFlowDelegatePlugin,
-                            "ContactsFlowDelegatePlugin-Tests",
-                            ControlsFlowDelegatePlugin,
-                            ControlsFlowDelegatePluginTests,
-                            FindDeviceFlowDelegatePlugin,
-                            FindDeviceFlowDelegatePluginTests,
-                            GeoFlowDelegatePlugin,
-                            HomeAutomationFlowDelegatePlugin,
-                            HomeAutomationFlowDelegatePluginTests,
-                            HomeAutomationInternal, MediaDialogTests,
-                            MediaFlowDelegatePlugin, MessagesFlowDelegatePlugin,
-                            "MessagesFlowDelegatePlugin-Tests",
-                            NotebookFlowDelegatePlugin,
-                            "NotebookFlowDelegatePlugin-Tests",
-                            PhoneCallFlowDelegatePlugin,
-                            "PhoneCallFlowDelegatePlugin-Tests",
-                            PlaybackControlDialogTests,
-                            SettingsFlowDelegatePlugin, SiriAppResolutionTests,
-                            SiriAudioInternal, SiriAudioInternalTests,
-                            SiriKitDomainsCommon, "SiriKitDomainsCommon-Tests",
-                            SiriKitExecutor, "SiriKitExecutorBundle-Tests",
-                            SiriKitFlow, SiriKitFlowTests, SiriMediaIntents,
-                            SiriMediaIntentsTests, SiriPlaybackControlIntents,
-                            SiriPlaybackControlIntentsTests, SiriSettingsIntents,
-                            SiriSettingsIntentsTests, SiriVideoIntents,
-                            SiriVideoIntentsTests, TimerFlowDelegatePlugin,
-                            "TimerFlowDelegatePlugin-Tests", VideoDialogTests,
-                            VideoFlowDelegatePlugin,
-                            VoiceCommandsFlowDelegatePlugin,
-                            "VoiceCommandsFlowDelegatePlugin-Tests" ]
     symbols:              [ _$s10Foundation4DateV11SiriKitFlowE15ecmaScriptEpochs5Int64Vvg,
                             _$s10Foundation4DateV11SiriKitFlowE15ecmaScriptEpochs5Int64VvpMV,
                             _$s10IntentType11SiriKitFlow15RCHFlowDelegatePTl,
@@ -4846,12 +4813,15 @@ exports:
                             _SiriKitFlowVersionNumber, _SiriKitFlowVersionString ]
     objc-classes:         [ CFPBJSONReader, CFPBJSONUtils, CFPBJSONWriter,
                             CFPBProperty ]
-    objc-ivars:           [ CFPBProperty._convertFromString,
+    objc-ivars:           [ CFPBJSONReader._objNamesToPropMaps,
+                            CFPBJSONReader._propertyCache,
+                            CFPBProperty._convertFromString,
                             CFPBProperty._convertToString, CFPBProperty._count,
                             CFPBProperty._fromDictionaryReprFn,
                             CFPBProperty._getter, CFPBProperty._has,
-                            CFPBProperty._name, CFPBProperty._setter,
-                            CFPBProperty._structFields, CFPBProperty._structName,
-                            CFPBProperty._structSize, CFPBProperty._subType,
+                            CFPBProperty._name, CFPBProperty._objectType,
+                            CFPBProperty._setter, CFPBProperty._structFields,
+                            CFPBProperty._structName, CFPBProperty._structSize,
+                            CFPBProperty._subObjectType, CFPBProperty._subType,
                             CFPBProperty._toDictionaryReprFn, CFPBProperty._type ]
 ...

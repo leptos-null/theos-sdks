@@ -21,4 +21,12 @@ exports:
                             _OTSVGTableCreateFromData,
                             _OTSVGTableGetDocumentIndexForGlyph,
                             _OTSVGTableRelease ]
+    objc-classes:         [ _OTSVGParserDelegate ]
+    objc-ivars:           [ _OTSVGParserDelegate.elementCount,
+                            _OTSVGParserDelegate.errorOccurred,
+                            _OTSVGParserDelegate.namespaces,
+                            _OTSVGParserDelegate.root,
+                            _OTSVGParserDelegate.skipDepth,
+                            _OTSVGParserDelegate.stack,
+                            _OTSVGParserDelegate.unitsPerEm ]
 ...

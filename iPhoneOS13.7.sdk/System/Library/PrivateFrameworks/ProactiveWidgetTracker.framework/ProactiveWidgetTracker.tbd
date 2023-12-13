@@ -11,4 +11,19 @@ exports:
     symbols:              [ _ProactiveWidgetTrackerVersionNumber,
                             _ProactiveWidgetTrackerVersionString ]
     objc-classes:         [ _PWTWidgetEventTracker ]
+    objc-ivars:           [ _PWTWidgetEventTracker._activeDisplayMode,
+                            _PWTWidgetEventTracker._conversionTracker,
+                            _PWTWidgetEventTracker._didBecomeVisibleWhileLocked,
+                            _PWTWidgetEventTracker._foregroundingTracker,
+                            _PWTWidgetEventTracker._hasReceivedActiveDisplayModeChangeNotificationOnce,
+                            _PWTWidgetEventTracker._identifier,
+                            _PWTWidgetEventTracker._isCurrentlyVisible,
+                            _PWTWidgetEventTracker._lastAppearTime,
+                            _PWTWidgetEventTracker._loggingQueue,
+                            _PWTWidgetEventTracker._resizeTracker,
+                            _PWTWidgetEventTracker._screenLingerTracker,
+                            _PWTWidgetEventTracker._updateTracker,
+                            _PWTWidgetEventTracker._widgetIsForeground,
+                            _PWTWidgetEventTracker._widgetWasEverForeground,
+                            _PWTWidgetEventTracker._willBecomeVisible ]
 ...

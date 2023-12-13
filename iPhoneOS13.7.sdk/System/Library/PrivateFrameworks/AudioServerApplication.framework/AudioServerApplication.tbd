@@ -12,4 +12,23 @@ exports:
                             ASABox, ASAClockDevice, ASAControl, ASACoreAudio,
                             ASALevelControl, ASAObject, ASAPlaythrough, ASAPlugin,
                             ASASelectorControl, ASAStream ]
+    objc-ivars:           [ ASAAudioFormat._bitsPerChannel,
+                            ASAAudioFormat._bytesPerFrame,
+                            ASAAudioFormat._bytesPerPacket,
+                            ASAAudioFormat._channelsPerFrame,
+                            ASAAudioFormat._formatFlags,
+                            ASAAudioFormat._formatID,
+                            ASAAudioFormat._framesPerPacket,
+                            ASAAudioFormat._maximumSampleRate,
+                            ASAAudioFormat._minimumSampleRate,
+                            ASAAudioFormat._sampleRate, ASACoreAudio._cadPort,
+                            ASACoreAudio._clients, ASACoreAudio._deathQueue,
+                            ASACoreAudio._deathSource, ASACoreAudio._plugins,
+                            ASAObject._objectID, ASAPlaythrough._aggregateID,
+                            ASAPlaythrough._aggregateUID,
+                            ASAPlaythrough._audioDevice,
+                            ASAPlaythrough._channelMapping,
+                            ASAPlaythrough._ioContext, ASAPlaythrough._playing,
+                            ASAPlaythrough._procID,
+                            ASASelectorControl._currentItems ]
 ...

@@ -31,7 +31,20 @@ exports:
                             DMMigrationPluginWrapperConnection,
                             DMPluginFileSystemRep, DMUserDataDispositionManager,
                             DMXPCConnection, DataClassMigrator ]
-    objc-ivars:           [ DMXPCConnection._connection, DMXPCConnection._queue,
-                            DMXPCConnection._replyQueue,
-                            DataClassMigrator._context ]
+    objc-ivars:           [ DMConnection._connection,
+                            DMEnvironment._testMigrationInfrastructureOnly,
+                            DMMigrationPluginWrapperConnection._connection,
+                            DMPluginFileSystemRep._bundle,
+                            DMPluginFileSystemRep._bundleIdentifier,
+                            DMPluginFileSystemRep._name,
+                            DMPluginFileSystemRep._path,
+                            DMXPCConnection._connection,
+                            DMXPCConnection._interruptionHandler,
+                            DMXPCConnection._invalidationHandler,
+                            DMXPCConnection._queue, DMXPCConnection._replyQueue,
+                            DataClassMigrator._context,
+                            DataClassMigrator._didUpgrade,
+                            DataClassMigrator._restoredBackupBuildVersion,
+                            DataClassMigrator._restoredBackupProductType,
+                            DataClassMigrator._userDataDisposition ]
 ...

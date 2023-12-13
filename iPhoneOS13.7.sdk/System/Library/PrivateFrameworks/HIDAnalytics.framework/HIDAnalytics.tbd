@@ -21,4 +21,17 @@ exports:
                             HIDAnalyticsHistogramEvent,
                             HIDAnalyticsHistogramEventField,
                             HIDAnalyticsReporter ]
+    objc-ivars:           [ HIDAnalyticsEvent._desc, HIDAnalyticsEvent._fields,
+                            HIDAnalyticsEvent._isUpdated,
+                            HIDAnalyticsEvent._name,
+                            HIDAnalyticsEventField._fieldName,
+                            HIDAnalyticsEventField.integerValue,
+                            HIDAnalyticsHistogramEvent._field,
+                            HIDAnalyticsHistogramEvent._isUpdated,
+                            HIDAnalyticsHistogramEventField._fieldName,
+                            HIDAnalyticsHistogramEventField._segmentCount,
+                            HIDAnalyticsHistogramEventField._segments,
+                            HIDAnalyticsReporter._events,
+                            HIDAnalyticsReporter._queue,
+                            HIDAnalyticsReporter._timer ]
 ...

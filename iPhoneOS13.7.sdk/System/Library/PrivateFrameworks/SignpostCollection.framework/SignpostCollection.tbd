@@ -18,4 +18,17 @@ exports:
                             _kSignpostNotification_NoTimeout ]
     objc-classes:         [ SignpostSerializationFilterConfiguration,
                             SignpostSupportObjectSerializer ]
+    objc-ivars:           [ SignpostSerializationFilterConfiguration._pidFilter,
+                            SignpostSerializationFilterConfiguration._processNameFilter,
+                            SignpostSerializationFilterConfiguration._subsystemCategoryFilter,
+                            SignpostSerializationFilterConfiguration._uniquePidFilter,
+                            SignpostSupportObjectSerializer._extractor,
+                            SignpostSupportObjectSerializer._filterConfiguration,
+                            SignpostSupportObjectSerializer._maxBatchSize,
+                            SignpostSupportObjectSerializer._maxBytesSize,
+                            SignpostSupportObjectSerializer._outstandingLogMessage,
+                            SignpostSupportObjectSerializer._outstandingSignpostObjects,
+                            SignpostSupportObjectSerializer._redactPrivacySensitiveData,
+                            SignpostSupportObjectSerializer._serializedLogMessageBlock,
+                            SignpostSupportObjectSerializer._serializedSignpostEventBlock ]
 ...

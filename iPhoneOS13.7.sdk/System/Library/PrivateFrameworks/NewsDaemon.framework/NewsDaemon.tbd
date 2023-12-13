@@ -16,4 +16,11 @@ exports:
                             _NewsDaemonVersionString ]
     objc-classes:         [ NDNewsDaemonContext, NDNewsServiceConnection,
                             NDNewsServiceConnectionClientProxy ]
+    objc-ivars:           [ NDNewsDaemonContext._daemon,
+                            NDNewsDaemonContext._updateResultsHandler,
+                            NDNewsServiceConnection._accessQueue,
+                            NDNewsServiceConnection._client,
+                            NDNewsServiceConnection._connection,
+                            NDNewsServiceConnection._daemon,
+                            NDNewsServiceConnectionClientProxy._client ]
 ...

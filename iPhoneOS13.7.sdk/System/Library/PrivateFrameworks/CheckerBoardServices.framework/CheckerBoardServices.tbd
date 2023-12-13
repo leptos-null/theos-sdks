@@ -19,4 +19,21 @@ exports:
     objc-classes:         [ CBSClient, CBSPaneViewController, CBSProxyServer,
                             CBSTableViewController, CBSUIAlert, CBSUIAlertAction,
                             CBSUtilities ]
+    objc-ivars:           [ CBSClient._connection,
+                            CBSPaneViewController._primaryButton,
+                            CBSPaneViewController._secondaryButton,
+                            CBSProxyServer._port, CBSProxyServer._server,
+                            CBSProxyServer._token,
+                            CBSTableViewController._attributedDetailDescriptionText,
+                            CBSTableViewController._containerFooterView,
+                            CBSTableViewController._containerFooterViewFrame,
+                            CBSTableViewController._detailDescriptionText,
+                            CBSTableViewController._headerView,
+                            CBSTableViewController._tableView,
+                            CBSTableViewController._titleText,
+                            CBSUIAlert._actions, CBSUIAlert._identifier,
+                            CBSUIAlert._isActive, CBSUIAlert._message,
+                            CBSUIAlert._preferredStyle, CBSUIAlert._title,
+                            CBSUIAlertAction._handler, CBSUIAlertAction._style,
+                            CBSUIAlertAction._title ]
 ...

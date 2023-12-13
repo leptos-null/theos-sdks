@@ -23,4 +23,16 @@ exports:
                             _SPApplicationsChanged ]
     objc-classes:         [ NCSComplication, NCSInternalSettingsManager,
                             NCSSettingsManager ]
+    objc-ivars:           [ NCSComplication._active,
+                            NCSComplication._appBundleIdentifier,
+                            NCSComplication._cannotBeDisabled,
+                            NCSComplication._complicationBundleIdentifier,
+                            NCSComplication._installState, NCSComplication._name,
+                            NCSComplication._sockPuppetIdentifier,
+                            NCSInternalSettingsManager._complicationDefinitions,
+                            NCSInternalSettingsManager._queue,
+                            NCSInternalSettingsManager._selectedComplicationIdentifier,
+                            NCSInternalSettingsManager._storedSettings,
+                            NCSInternalSettingsManager._syncManager,
+                            NCSSettingsManager._delegate ]
 ...

@@ -102,4 +102,13 @@ exports:
                             _kAppleIDAuthSupportStatusDone,
                             _kAppleIDAuthSupportToken,
                             _kAppleIDAuthSupportUsername ]
+    objc-classes:         [ AIASRequest, AIASSession ]
+    objc-ivars:           [ AIASRequest._URLRequest, AIASRequest._context,
+                            AIASRequest._data, AIASRequest._done,
+                            AIASRequest._error,
+                            AIASRequest._networkTaskDescription,
+                            AIASRequest._sema, AIASRequest._session,
+                            AIASRequest._success, AIASRequest._task,
+                            AIASSession._URLSession, AIASSession._invalidated,
+                            AIASSession._taskMap ]
 ...

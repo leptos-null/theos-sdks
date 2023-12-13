@@ -11,4 +11,7 @@ exports:
     symbols:              [ _CARDNDUIVersionNumber, _CARDNDUIVersionString ]
     objc-classes:         [ CARDNDLearnMoreViewController,
                             _CARLearnMoreViewController ]
+    objc-ivars:           [ _CARLearnMoreViewController._bottomMarginConstraint,
+                            _CARLearnMoreViewController._resourcePath,
+                            _CARLearnMoreViewController._textView ]
 ...

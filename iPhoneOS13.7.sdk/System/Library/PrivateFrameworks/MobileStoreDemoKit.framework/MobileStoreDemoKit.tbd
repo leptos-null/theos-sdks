@@ -46,4 +46,13 @@ exports:
     objc-classes:         [ MSDKF200EventEntityMO, MSDKF200EventStoreHelper,
                             MSDKManagedDevice, MSDLocalization, MSDLogModel,
                             MSDPreferencesFile ]
+    objc-ivars:           [ MSDKF200EventStoreHelper._container,
+                            MSDKF200EventStoreHelper._context,
+                            MSDKF200EventStoreHelper._eventsToReport,
+                            MSDKManagedDevice._F200EventObserver,
+                            MSDKManagedDevice._connection,
+                            MSDKManagedDevice._delegate,
+                            MSDKManagedDevice._helperConnection,
+                            MSDLocalization._localizationTable,
+                            MSDLogModel._logFP, MSDPreferencesFile._cache ]
 ...

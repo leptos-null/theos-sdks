@@ -14,4 +14,11 @@ exports:
                             _AudioDataAnalysisVersionNumber,
                             _AudioDataAnalysisVersionString ]
     objc-classes:         [ ADAMAudioDataReceiver ]
+    objc-ivars:           [ ADAMAudioDataReceiver._callbacks,
+                            ADAMAudioDataReceiver._configs,
+                            ADAMAudioDataReceiver._connection,
+                            ADAMAudioDataReceiver._connectionDidInvalidate,
+                            ADAMAudioDataReceiver._lock,
+                            ADAMAudioDataReceiver._name,
+                            ADAMAudioDataReceiver._sensorStatus ]
 ...

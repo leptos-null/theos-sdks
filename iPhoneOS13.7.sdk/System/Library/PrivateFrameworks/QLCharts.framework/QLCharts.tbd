@@ -67,5 +67,8 @@ exports:
                             _kOIChartStrokeWidthKey, _kOIChartTextColorKey,
                             _kOIChartTitleAreaKey, _kOIChartTitleKey,
                             _kOIChartUseShadowsKey, _kOIChartXYType ]
-    objc-classes:         [ OIPieChartRenderer ]
+    objc-classes:         [ OIPieChartRenderer, OIPieSliceCGRenderer ]
+    objc-ivars:           [ OIPieChartRenderer._chart,
+                            OIPieChartRenderer._sliceRenderer,
+                            OIPieSliceCGRenderer._chart ]
 ...

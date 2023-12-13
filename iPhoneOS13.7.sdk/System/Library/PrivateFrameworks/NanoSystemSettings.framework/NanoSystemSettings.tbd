@@ -52,4 +52,16 @@ exports:
                             _nss_daemon_log, _nss_framework_log ]
     objc-classes:         [ NSSManager, NSSUsageApp, NSSUsageBundle,
                             NSSUsageBundleCategory ]
+    objc-ivars:           [ NSSManager._externalQueue, NSSManager._internalQueue,
+                            NSSManager._xpcConnection,
+                            NSSUsageApp._bundleIdentifier,
+                            NSSUsageApp._bundleVersion, NSSUsageApp._dataSize,
+                            NSSUsageApp._dynamicSize, NSSUsageApp._name,
+                            NSSUsageApp._sharedSize, NSSUsageApp._staticSize,
+                            NSSUsageApp._totalSize,
+                            NSSUsageBundle._bundleIdentifier,
+                            NSSUsageBundle._categories, NSSUsageBundle._name,
+                            NSSUsageBundle._purgeable, NSSUsageBundle._totalSize,
+                            NSSUsageBundleCategory._name,
+                            NSSUsageBundleCategory._size ]
 ...

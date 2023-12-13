@@ -269,4 +269,7 @@ exports:
                             _kAPSXPCServerOption_EntitlementName, _o4IBrWf,
                             _rJPl3sdBfc0E3yB, _tGvVBtfGSsOH67XQ, _xOvZekdnwD6 ]
     objc-classes:         [ APSRadarComponentEntry ]
+    objc-ivars:           [ APSRadarComponentEntry.componentID,
+                            APSRadarComponentEntry.componentName,
+                            APSRadarComponentEntry.componentVersion ]
 ...

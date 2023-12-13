@@ -16,4 +16,21 @@ exports:
                             _charSetWithEndpoints ]
     objc-classes:         [ NPComponentSequence, NPHMMClassifier,
                             NPNameComponentsData, NPNameParser ]
+    objc-ivars:           [ NPComponentSequence._emissionModelScore,
+                            NPComponentSequence._favorite,
+                            NPComponentSequence._observation,
+                            NPComponentSequence._oovIndices,
+                            NPComponentSequence._score,
+                            NPComponentSequence._sequence,
+                            NPComponentSequence._stateModelScore,
+                            NPHMMClassifier._nameComponentsData,
+                            NPHMMClassifier._stateProbabilities,
+                            NPHMMClassifier._totalFamilyNamesCount,
+                            NPHMMClassifier._totalGivenNamesCount,
+                            NPHMMClassifier._uniqueFamilyNamesCount,
+                            NPHMMClassifier._uniqueGivenNamesCount,
+                            NPNameComponentsData._nameComponents,
+                            NPNameParser._classifier,
+                            NPNameParser._confidenceThreshold,
+                            NPNameParser._nameComponentsData ]
 ...

@@ -136,6 +136,8 @@ exports:
                             _parseThermalData, _parseThread, _rollAppleCareLogs,
                             _setDiagnosticLogSubmission, _sortNumerically ]
     objc-classes:         [ OTATaskingAgentClient, StructuredDataReport ]
-    objc-ivars:           [ StructuredDataReport._log_type,
+    objc-ivars:           [ OTATaskingAgentClient._connection,
+                            OTATaskingAgentClient._synchRemoteObjectProxy,
+                            StructuredDataReport._log_type,
                             StructuredDataReport._raw_logfile ]
 ...

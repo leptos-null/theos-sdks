@@ -12,4 +12,23 @@ exports:
                             _MetricKitSourceVersionString ]
     objc-classes:         [ MXPowerlogData, MXSourceData, MXSourceManager,
                             MXSourceXPCPayload ]
+    objc-ivars:           [ MXPowerlogData._applicationLaunchMetrics,
+                            MXPowerlogData._applicationResourceExceptionMetrics,
+                            MXPowerlogData._applicationResponsivenessMetrics,
+                            MXPowerlogData._applicationTimeMetrics,
+                            MXPowerlogData._cellularConditionMetrics,
+                            MXPowerlogData._cpuMetrics,
+                            MXPowerlogData._diskIOMetrics,
+                            MXPowerlogData._displayMetrics,
+                            MXPowerlogData._gpuMetrics,
+                            MXPowerlogData._includesMultipleApplicationVersions,
+                            MXPowerlogData._locationActivityMetrics,
+                            MXPowerlogData._memoryMetrics,
+                            MXPowerlogData._networkTransferMetrics,
+                            MXPowerlogData._signpostMetrics,
+                            MXSourceManager._connection,
+                            MXSourceManager._sourceManagerLogHandle,
+                            MXSourceXPCPayload._datestamp,
+                            MXSourceXPCPayload._metrics,
+                            MXSourceXPCPayload._sourceID ]
 ...

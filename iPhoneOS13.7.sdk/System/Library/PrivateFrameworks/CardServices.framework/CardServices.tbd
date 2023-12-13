@@ -15,4 +15,13 @@ exports:
                             _CRSCardServiceBundle, _CRSCardServiceBundleManager,
                             _CRSPassthroughService, _CRSServiceBundle,
                             _CRSServiceBundleManager ]
+    objc-ivars:           [ CRSCardRequest._content,
+                            CRSCardRequest._excludedServiceIdentifiers,
+                            CRSCardRequest._format,
+                            CRSCardRequest._loadsBundleServices,
+                            CRSCardRequest._queue, CRSCardResponse._card,
+                            CRSCardResponse._request,
+                            CRSIdentifiedServiceRegistry._identifiedServices,
+                            _CRSCardServiceBundle._cardService,
+                            _CRSServiceBundle._service ]
 ...

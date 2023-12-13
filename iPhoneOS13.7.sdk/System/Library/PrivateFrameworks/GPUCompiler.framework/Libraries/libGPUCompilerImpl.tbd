@@ -644,7 +644,9 @@ exports:
                             __ZTVN4llvm3air54AIRDiagnosticInfoDuplicatedRenderTargetAttachmentIndexE,
                             __ZTVN4llvm3air55AIRDiagnosticInfoWritableTextureInNonVoidVertexFunctionE,
                             __ZTVN4llvm3air56AIRDiagnosticInfoInputImageblockDataOverlapRenderTargetsE,
-                            __ZTVN4llvm3air57AIRDiagnosticInfoOutputImageblockDataOverlapRenderTargetsE ]
+                            __ZTVN4llvm3air57AIRDiagnosticInfoOutputImageblockDataOverlapRenderTargetsE,
+                            ___eqdf2, ___eqsf2, ___gtdf2, ___gtsf2, ___ltdf2, ___ltsf2,
+                            ___nedf2, ___nesf2 ]
     weak-def-symbols:     [ __ZN4llvm15callDefaultCtorINS_3air20AIRTargetInfoWrapperEEEPNS_4PassEv,
                             __ZN4llvm3air22StreamingArchiveWriterIjvE12writeModulesEv,
                             __ZN4llvm3air22StreamingArchiveWriterIjvE15checkSizeErrorsEv,

@@ -58,6 +58,7 @@ exports:
                             BluetoothManager._airplaneMode,
                             BluetoothManager._audioConnected,
                             BluetoothManager._available,
+                            BluetoothManager._blacklistEnabled,
                             BluetoothManager._btAddrDict,
                             BluetoothManager._btDeviceDict,
                             BluetoothManager._discoveryAgent,
@@ -66,5 +67,6 @@ exports:
                             BluetoothManager._scanningEnabled,
                             BluetoothManager._scanningInProgress,
                             BluetoothManager._scanningServiceMask,
-                            BluetoothManager._session, BluetoothManager._state ]
+                            BluetoothManager._session, BluetoothManager._state,
+                            RemoteDeviceManager._connection ]
 ...

@@ -9,4 +9,9 @@ objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
     objc-classes:         [ FFConfiguration, FFFeatureState ]
+    objc-ivars:           [ FFConfiguration._domains,
+                            FFConfiguration.configByLevel, FFConfiguration.lock,
+                            FFConfiguration.metaByLevel,
+                            FFConfiguration.searchPaths, FFFeatureState._domain,
+                            FFFeatureState._feature, FFFeatureState._value ]
 ...

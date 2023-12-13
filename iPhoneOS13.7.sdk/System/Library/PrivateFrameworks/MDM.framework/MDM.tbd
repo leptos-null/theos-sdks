@@ -105,7 +105,16 @@ exports:
                             MCSSPersonalizeOffersDelegate,
                             MCSSPurchaseRequestDelegate, MCSSRequestDelegate,
                             MCUserMDMParser, _MCBlockOperationContext ]
-    objc-ivars:           [ MCSSAuthenticationRequestDelegate._authenticatedAccount,
+    objc-ivars:           [ MCBlockOperation._block, MCMDMParser._isChaperoned,
+                            MCMDMParser._isMDM,
+                            MCMDMParser._managingProfileIdentifier,
+                            MCMDMParser._operationQueue, MCMDMParser._server,
+                            MCSSAuthenticationRequestDelegate._authenticatedAccount,
                             MCSSDownloadManifestRequestDelegate._response,
-                            MCSSPersonalizeOffersDelegate._response ]
+                            MCSSItemLookupRequestDelegate._items,
+                            MCSSPersonalizeOffersDelegate._response,
+                            MCSSRequestDelegate._completionBlock,
+                            MCSSRequestDelegate._request,
+                            MCSSRequestDelegate._timeoutTimer,
+                            _MCBlockOperationContext._operation ]
 ...

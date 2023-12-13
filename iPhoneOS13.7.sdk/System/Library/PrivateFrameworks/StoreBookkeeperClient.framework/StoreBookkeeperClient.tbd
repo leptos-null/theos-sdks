@@ -17,4 +17,22 @@ exports:
                             SBCPlaybackPositionSyncService,
                             SBCPlaybackPositionValueService, SBCXPCService,
                             SBCXPCServiceInterface ]
+    objc-ivars:           [ SBCClientConfiguration._playbackPositionDomain,
+                            SBCPlaybackPositionDomain._domainIdentifier,
+                            SBCPlaybackPositionDomain._foreignDatabasePath,
+                            SBCPlaybackPositionDomain._supportsSyncProtocol,
+                            SBCPlaybackPositionDomain._ubiquitousDatabasePath,
+                            SBCPlaybackPositionEntity._bookmarkTime,
+                            SBCPlaybackPositionEntity._bookmarkTimestamp,
+                            SBCPlaybackPositionEntity._foreignDatabaseEntityID,
+                            SBCPlaybackPositionEntity._hasBeenPlayed,
+                            SBCPlaybackPositionEntity._playbackPositionDomain,
+                            SBCPlaybackPositionEntity._ubiquitousIdentifier,
+                            SBCPlaybackPositionEntity._userPlayCount,
+                            SBCPlaybackPositionService._playbackPositionDomain,
+                            SBCPlaybackPositionService._usingPlaybackPositions,
+                            SBCXPCService._XPCServiceInterface,
+                            SBCXPCService._clientConfiguration,
+                            SBCXPCService._connectionConfigured,
+                            SBCXPCService._queue, SBCXPCService._xpcConnection ]
 ...

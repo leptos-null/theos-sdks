@@ -145,4 +145,10 @@ exports:
                             __handleNANGetRequest, __handleNANSetRequest,
                             __parseHs20OperatorName, _htonIPPORT, _kCYCLOPS_OUI,
                             _ntohIPPORT ]
+    objc-classes:         [ VCCTServiceMonitor ]
+    objc-ivars:           [ VCCTServiceMonitor._connectionStatus,
+                            VCCTServiceMonitor._ctClient,
+                            VCCTServiceMonitor._dataStatus,
+                            VCCTServiceMonitor._inHomeCountry,
+                            VCCTServiceMonitor._signalStrength ]
 ...

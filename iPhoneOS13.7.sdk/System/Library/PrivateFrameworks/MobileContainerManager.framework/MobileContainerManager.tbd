@@ -79,4 +79,8 @@ exports:
                             MCMSystemDataContainer, MCMTempDirDataContainer,
                             MCMVPNPluginContainer, MCMVPNPluginDataContainer,
                             MCMXPCServiceDataContainer ]
+    objc-ivars:           [ MCMContainer._containerClass,
+                            MCMContainer._identifier,
+                            MCMContainer._personaUniqueString,
+                            MCMContainer._thisContainer, MCMContainer._uuid ]
 ...

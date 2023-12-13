@@ -18,4 +18,14 @@ exports:
                             _SHS_LocalizedStringForSounds ]
     objc-classes:         [ SHSAudioPlayback, SHSSoundsPrefController,
                             SHSSpeakersPrefController, SHSToneController ]
+    objc-ivars:           [ SHSSoundsPrefController._hasTelephony,
+                            SHSSoundsPrefController._lastTime,
+                            SHSSoundsPrefController._rateLimitedVolume,
+                            SHSSoundsPrefController._sliderActive,
+                            SHSSoundsPrefController._voiceMailSpecifier,
+                            SHSSoundsPrefController._voiceMailSpecifierIndex,
+                            SHSSoundsPrefController._volume,
+                            SHSSoundsPrefController._volumeHUDsuppressed,
+                            SHSToneController._tonePickerViewController,
+                            SHSToneController._vibrationPickerViewController ]
 ...

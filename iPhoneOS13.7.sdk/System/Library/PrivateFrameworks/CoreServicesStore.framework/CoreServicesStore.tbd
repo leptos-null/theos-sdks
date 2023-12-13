@@ -67,6 +67,23 @@ exports:
                             __CSVisualizerOutputTypeAttributeName,
                             __CSVisualizerTemporalValueAttributeName,
                             __kCSStoreTableNameMaxLength ]
-    objc-classes:         [ _CSVisualizationArchiver, _CSVisualizer,
+    objc-classes:         [ _CSStore, _CSStore2DataContainer,
+                            _CSVisualizationArchiver, _CSVisualizer,
                             _CSVisualizerPredicate ]
+    objc-ivars:           [ _CSStore._accessQueue, _CSStore._store,
+                            _CSStore2DataContainer.p,
+                            _CSStore2DataContainer.pAllocatedLength,
+                            _CSVisualizationArchiver._closeWhenDone,
+                            _CSVisualizationArchiver._fileHandle,
+                            _CSVisualizationArchiver._hadEPIPE,
+                            _CSVisualizationArchiver._outputAsXML,
+                            _CSVisualizationArchiver._stats,
+                            _CSVisualizationArchiver._unitDescriptionPredicate,
+                            _CSVisualizationArchiver._visualizer,
+                            _CSVisualizer._handlers, _CSVisualizer._lock,
+                            _CSVisualizer._store, _CSVisualizer._userInfo,
+                            _CSVisualizerPredicate._numericPredicate,
+                            _CSVisualizerPredicate._operator,
+                            _CSVisualizerPredicate._searchString,
+                            _CSVisualizerPredicate._title ]
 ...

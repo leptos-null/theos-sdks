@@ -19,4 +19,6 @@ exports:
                             _ICFUnregisterCallFilterBlockWithIdentifier,
                             _ICFUnregisterCallFilterResultBlockWithIdentifier ]
     objc-classes:         [ ICFCallServer ]
+    objc-ivars:           [ ICFCallServer._clients, ICFCallServer._connection,
+                            ICFCallServer._hasRegistered ]
 ...

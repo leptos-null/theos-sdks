@@ -23,4 +23,17 @@ exports:
                             NSSArticle, NSSArticleViewController,
                             NSSComplicationDataSource, NSSNewsArticlePrefetcher,
                             NSSNewsRemoteViewController, NSSNewsViewController ]
+    objc-ivars:           [ NNCLastNewsStoryResult._excerpt,
+                            NNCLastNewsStoryResult._family,
+                            NNCLastNewsStoryResult._headlineIdentifier,
+                            NNCLastNewsStoryResult._headlineIndex,
+                            NNCLastNewsStoryResult._headlineTitle,
+                            NNCLastNewsStoryResult._sectionIdentifier,
+                            NNCLastNewsStoryResult._sectionName,
+                            NNCLastNewsStoryResult._sourceIdentifier,
+                            NNCLastNewsStoryResult._sourceName,
+                            NNCLastNewsStoryResult._totalHeadlineCount,
+                            NSSNewsViewController._articleIDs,
+                            NSSNewsViewController._linkPreviewing,
+                            NSSNewsViewController._remoteViewContainerViewController ]
 ...
