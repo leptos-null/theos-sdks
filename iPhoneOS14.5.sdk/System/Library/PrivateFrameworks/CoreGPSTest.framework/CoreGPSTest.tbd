@@ -1,9 +1,11 @@
----
+--- !tapi-tbd-v3
 archs:                 [ armv7, armv7s, arm64, arm64e ]
 platform:              ios
+flags:                 [ flat_namespace ]
 install-name:          /System/Library/PrivateFrameworks/CoreGPSTest.framework/CoreGPSTest
 current-version:       1
 compatibility-version: 1
+objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
     symbols:              [ _CoreGPSTestVersionNumber, _CoreGPSTestVersionString,
@@ -446,6 +448,6 @@ exports:
                             __ZTVN7GnssHal18ExtensionsOlafImplE,
                             __ZTVN7GnssHal8CommPcieE, __ZTVN7GnssHal8CommUartE,
                             _kBundle ]
-    objc-classes:         [ _GpsDevice, _GpsError ]
-    objc-ivars:           [ _GpsDevice._fTestDevice, _GpsDevice._fTestOptions ]
+    objc-classes:         [ GpsDevice, GpsError ]
+    objc-ivars:           [ GpsDevice._fTestDevice, GpsDevice._fTestOptions ]
 ...

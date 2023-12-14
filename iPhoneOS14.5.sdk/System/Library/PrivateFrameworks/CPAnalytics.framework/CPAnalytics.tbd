@@ -8,10 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ AssetExplorer, CPAnalyticsTestSupport, MediaMiningKit,
-                            MobileSlideShow, PhotoAnalysis, PhotoVision, Photos,
-                            PhotosGraph, PhotosMessagesApp, PhotosTests, PhotosUI,
-                            PhotosUICore, graphctl ]
     symbols:              [ _CPAnalyticKnowledgeStoreVersionType,
                             _CPAnalyticKnowledgeStoreVersionValue,
                             _CPAnalyticsCacheDemographicsSummaryKey,

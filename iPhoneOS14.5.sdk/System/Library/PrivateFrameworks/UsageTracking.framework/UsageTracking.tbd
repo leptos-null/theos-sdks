@@ -8,12 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ ContextStoreAgent, DeviceManagementTests,
-                            PowerlogHelperdOperators, PowerlogLiteOperators,
-                            RemoteManagementTests, SafariShared, ScreenTime,
-                            ScreenTimeAgent, ScreenTimeSettingsUI, ScreenTimeTests,
-                            ScreenTimeUI, ScreenTimeWebExtension,
-                            UsageTrackingAgent, dmd, remotemanagementd, usagetool ]
     symbols:              [ _USBundleIdentifierQuickLookUIServiceEmbedded,
                             _USBundleIdentifierQuickLookUIServiceMacOS,
                             _USBundleIdentifierSafariEmbedded,

@@ -8,17 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ "AvatarStack.2.preview-thunk", CoreFactorySupport,
-                            FactoryGestaltTests, MobileNotes, MobileNotesDebug,
-                            MobileNotesTestHost, "NoteWidgetView.2.preview-thunk",
-                            Notes, NotesAnalytics,
-                            "NotesFolderWidgetView.2.preview-thunk",
-                            NotesInternalSettings, NotesSettings, QuickNoteModule,
-                            WidgetExtension, "WidgetHeader.2.preview-thunk",
-                            com.apple.mobilenotes.QuickLookExtension,
-                            com.apple.mobilenotes.SharingExtension,
-                            factorysupportd, "iOS App Unit Tests",
-                            iOSUIFrameworkTests, libFactoryGestalt.a ]
     symbols:              [ _ICAccessibilityAccessibilityLargerTextSizesEnabled,
                             _ICAccessibilityContentSizeCategories,
                             _ICAccessibilityLinearInterpolatedValueForAccessibilityContentSizeCategory,

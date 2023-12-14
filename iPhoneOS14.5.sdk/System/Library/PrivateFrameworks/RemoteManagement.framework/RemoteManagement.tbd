@@ -8,19 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ AccountExtension, AppManagementExtension,
-                            CloudMDMAppListTestApp,
-                            InteractiveLegacyProfilesExtension,
-                            LegacyProfilesExtension, ManagementTestExtension,
-                            MiniLauncher, PasscodeSettingsExtension,
-                            RemoteManagementAccountSettings,
-                            "RemoteManagementAccountSettings-macOS",
-                            RemoteManagementAccountsNotificationPlugin,
-                            RemoteManagementAgent,
-                            RemoteManagementInternalSettings,
-                            RemoteManagementTests, SettingsSharedSupport, Setup,
-                            "Setup Assistant", SetupTests, remotemanagementd, rmdctl,
-                            rmdinspect ]
     symbols:              [ _RMAccountAdditionalInfoKeyManagedByOlympus,
                             _RMAccountPropertyKeyAccountScheme,
                             _RMAccountPropertyKeyAdditionalInfo,

@@ -8,12 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ FMIPCoreTests, FMInternalSettingsBundle, FindMy,
-                            FindMySiriIntents, FindMyTests, FindMyWidgetDevices,
-                            FindMyWidgetIntentsDevices, FindMyWidgetIntentsItems,
-                            FindMyWidgetItems, FindMyWidgetTestApp, SiriFindMy,
-                            SiriFindMyBundle, SiriFindMyTester, SiriFindMyTests,
-                            fmipcoretool ]
     objc-classes:         [ _TtC8FMIPCore17FMPhoneNumberUtil,
                             _TtC8FMIPCore22FMAPSConnectionHandler,
                             _TtC8FMIPCore22FMIPLocationController,

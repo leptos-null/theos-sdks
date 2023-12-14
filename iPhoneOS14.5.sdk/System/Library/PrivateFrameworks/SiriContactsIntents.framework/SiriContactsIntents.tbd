@@ -8,8 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ ContactsFlowDelegatePlugin, ContactsIntentExtension,
-                            SiriContactsIntentsTests ]
     symbols:              [ _$s11SiriKitFlow11DisplayHintV0A15ContactsIntentsE11descriptionSSvg,
                             _$s11SiriKitFlow11DisplayHintV0A15ContactsIntentsE11descriptionSSvpMV,
                             _$s11SiriKitFlow11DisplayHintVs23CustomStringConvertible0A15ContactsIntentsMc,

@@ -8,10 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ SiriKitExecutor, "SiriKitExecutorBundle-Tests",
-                            SiriKitFlow, SiriReferenceResolutionMuse,
-                            SiriReferenceResolutionMuseTests,
-                            SiriReferenceResolutionTests ]
     symbols:              [ _SiriReferenceResolutionVersionNumber,
                             _SiriReferenceResolutionVersionString ]
     objc-classes:         [ _TtC23SiriReferenceResolution17RRAnnotatedEntity ]

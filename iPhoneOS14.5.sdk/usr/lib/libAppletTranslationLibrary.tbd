@@ -1,17 +1,56 @@
---- !tapi-tbd
-tbd-version:     4
-targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
-uuids:
-  - target:          armv7-ios
-    value:           00000000-0000-0000-0000-000000000000
-  - target:          armv7s-ios
-    value:           00000000-0000-0000-0000-000000000000
-  - target:          arm64-ios
-    value:           342D0D60-DD91-3C27-85F4-619DBC902891
-  - target:          arm64e-ios
-    value:           DE50956C-0E3A-30A2-B1D1-8C47A42DB72A
-install-name:    '/usr/lib/libAppletTranslationLibrary.dylib'
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/libAppletTranslationLibrary.dylib
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
 exports:
-  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
-    objc-classes:    [ AppletTranslator ]
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ ATLCurrency, ATLGetDecoder, ATLLoggerObj, ATLTimer,
+                            AppletConfigurationData, AppletTranslator,
+                            BaseMifareDecoder, CopernicusDecoder,
+                            CopernicusHCEDecoder, DERDecoder, DERLogContext,
+                            EMVDecoder, ExpressMode, HPHistoryDecoder, HashHelper,
+                            HerculesDecoder, HerculesFareTables, HerculesMappings,
+                            HerculesVCReader, IDHistoryDecoder, MercuryDecoder,
+                            MifareDecoder, MifareUtils, OctopusDecoder,
+                            PluginDecoder, QPHistoryDecoder, SeosDecoder,
+                            SlalomDecoder, SlalomReadOperation, SlalomUtils,
+                            SlalomWriteOperation, TransceiverWrapper, WuluDecoder,
+                            WuluReaderContext, WuluRecord ]
+    objc-ivars:           [ ATLTimer._block, ATLTimer._delay, ATLTimer._queue,
+                            ATLTimer._src, AppletConfigurationData.config,
+                            AppletConfigurationData.maErrorCount,
+                            AppletConfigurationData.maMetadataQueryInterval,
+                            AppletConfigurationData.pluginCache,
+                            AppletConfigurationData.queue,
+                            AppletConfigurationData.retryInProgress,
+                            AppletConfigurationData.userDefaults,
+                            CopernicusDecoder._endPointIdentifier,
+                            CopernicusDecoder._state,
+                            CopernicusDecoder._transactionType,
+                            DERLogContext.circBuff,
+                            DERLogContext.circBuffStorage, HashHelper.ctx,
+                            PluginDecoder.script, SlalomDecoder._eotInProgress,
+                            SlalomDecoder._hciArray,
+                            SlalomDecoder._serviceProvider,
+                            SlalomReadOperation.blockNumber,
+                            SlalomReadOperation.serviceCode,
+                            SlalomWriteOperation.blockNumber,
+                            SlalomWriteOperation.offsets,
+                            SlalomWriteOperation.serviceCode,
+                            TransceiverWrapper._circBuffStorage,
+                            TransceiverWrapper._circbuff,
+                            TransceiverWrapper._transceiver, WuluDecoder.debug,
+                            WuluDecoder.decoderState, WuluReaderContext._balance,
+                            WuluReaderContext._file15, WuluReaderContext._file17,
+                            WuluReaderContext._file18, WuluReaderContext._file1A,
+                            WuluReaderContext._file1E,
+                            WuluReaderContext._localRecordFormat,
+                            WuluReaderContext._localRecords,
+                            WuluReaderContext._overdraft,
+                            WuluRecord._associatedSerialNumber, WuluRecord._data,
+                            WuluRecord._number, WuluRecord._sfi ]
 ...

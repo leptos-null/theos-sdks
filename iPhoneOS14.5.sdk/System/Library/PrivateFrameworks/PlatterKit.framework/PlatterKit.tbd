@@ -8,14 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ AppPredictionUI, BannerKitTest, BatteryCenterUI,
-                            BluetoothUIService, CarPlaySupport, CardKit,
-                            ChargingViewService, ClipUIServices, CoverSheet, HomeUI,
-                            Maps, PassKitUI, RecentsAppPopover, Sharing,
-                            SharingHUDService, Siri, SiriUI, SpringBoard,
-                            SpringBoardCore, UserNotificationsUIKit,
-                            UserNotificationsUIKitTests, Widgets, WorkflowUI, druid,
-                            proximitycontrold ]
     symbols:              [ _PLCAMediaTimingFunctionForViewAnimationCurve,
                             _PLConfigureUILabelWithPLPillContentItemStyle,
                             _PLContentViewHeightForContentSizeCategory,

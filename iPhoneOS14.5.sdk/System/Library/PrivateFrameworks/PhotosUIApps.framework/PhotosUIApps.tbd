@@ -8,7 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ PhotosReliveWidget, PhotosUITester ]
     symbols:              [ _$s12PhotosUIApps0A12ReliveWidgetV4bodyQrvg,
                             _$s12PhotosUIApps0A12ReliveWidgetV4bodyQrvpMV,
                             _$s12PhotosUIApps0A12ReliveWidgetV4bodyQrvpQOMQ,

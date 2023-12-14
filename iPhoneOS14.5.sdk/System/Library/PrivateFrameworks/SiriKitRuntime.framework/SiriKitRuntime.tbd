@@ -8,9 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ SiriExecution, SiriExecutionTests, SiriKitExecutor,
-                            "SiriKitExecutorBundle-Tests", SiriKitRuntimeTests,
-                            SiriRequestDispatcher, SiriRequestDispatcherTests ]
     symbols:              [ _$s11SiriKitFlow11BargeInModeV0aB7RuntimeE4from8aceModesACSaySSG_tFZ,
                             _$s11SiriKitFlow11InputOriginO0aB7RuntimeE4from03acedE0ACSgSS_tFZ,
                             _$s11SiriKitFlow14BargeInContextV0aB7RuntimeE16debugDescriptionSSvg,

@@ -1,17 +1,23 @@
---- !tapi-tbd
-tbd-version:     4
-targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
-uuids:
-  - target:          armv7-ios
-    value:           00000000-0000-0000-0000-000000000000
-  - target:          armv7s-ios
-    value:           00000000-0000-0000-0000-000000000000
-  - target:          arm64-ios
-    value:           D054962E-C447-3443-B81F-A4DE98D58688
-  - target:          arm64e-ios
-    value:           29E09D3B-DFFB-396D-94C2-7CF074D990ED
-install-name:    '/usr/lib/libSLAMDynamic.dylib'
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/libSLAMDynamic.dylib
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
 exports:
-  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
-    objc-classes:    [ SLAMObjC ]
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _DERDecodeItem, _DERDecodeItemPartialBuffer,
+                            _DERDecodeItemPartialBufferGetLength,
+                            _DERDecodeSeqContentInit, _DERDecodeSeqInit,
+                            _DERDecodeSeqNext,
+                            _DERDecodeSequenceContentWithBlock,
+                            _DERDecodeSequenceWithBlock, _DERParseBitString,
+                            _DERParseBoolean, _DERParseBooleanWithDefault,
+                            _DERParseInteger, _DERParseInteger64,
+                            _DERParseSequence, _DERParseSequenceContent,
+                            __ZN4SLAM4SLAM13PerformScriptEyN3gsl8not_nullINSt3__110shared_ptrINS_8SEHandleEEEEENS2_INS4_INS_7LogSinkEEEEE,
+                            __ZN4SLAM4SLAM15PerformRecoveryEN3gsl8not_nullINSt3__110shared_ptrINS_8SEHandleEEEEENS2_INS4_INS_7LogSinkEEEEE ]
+    objc-classes:         [ SLAMObjC ]
 ...

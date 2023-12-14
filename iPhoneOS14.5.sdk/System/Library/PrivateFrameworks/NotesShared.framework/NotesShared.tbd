@@ -8,24 +8,6 @@ compatibility-version: 1
 objc-constraint:       retain_release
 exports:
   - archs:                [ armv7, armv7s, arm64, arm64e ]
-    allowable-clients:    [ AppPredictionInternal, "AvatarStack.2.preview-thunk",
-                            CoreFactorySupport, FactoryGestaltTests, MobileNotes,
-                            MobileNotesDebug, MobileNotesTestHost,
-                            "NoteWidgetView.2.preview-thunk", Notes,
-                            NotesAccountNotificationPlugin, NotesAnalytics,
-                            NotesAnalyticsTests,
-                            "NotesFolderWidgetView.2.preview-thunk",
-                            NotesInternalSettings, NotesSettings, NotesUI,
-                            NotesWidgetExtensionPreview, QuickNoteModule,
-                            WidgetExtension, "WidgetHeader.2.preview-thunk", budd,
-                            com.apple.NotesImporter,
-                            com.apple.mobilenotes.QuickLookExtension,
-                            com.apple.mobilenotes.SharingExtension,
-                            com.apple.mobilenotes.SpotlightIndexExtension,
-                            factorysupportd, "generate-test-database",
-                            "iOS App Unit Tests", iOSSharedFrameworkStressTests,
-                            iOSSharedFrameworkUnitTests, iOSUIFrameworkTests,
-                            libFactoryGestalt.a, notestool ]
     symbols:              [ _CRPropertyOneOf, _CRPropertyOneOfKey,
                             _CRPropertyRegisterLatest, _CRPropertySet,
                             _CRPropertyString,

@@ -1,42 +1,79 @@
---- !tapi-tbd
-tbd-version:     4
-targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
-uuids:
-  - target:          armv7-ios
-    value:           00000000-0000-0000-0000-000000000000
-  - target:          armv7s-ios
-    value:           00000000-0000-0000-0000-000000000000
-  - target:          arm64-ios
-    value:           B07862ED-DDF5-3346-9997-9B756E637E2F
-  - target:          arm64e-ios
-    value:           DFD5DC56-8A38-3CD7-9BAF-3A99CAF4CC0F
-install-name:    '/usr/lib/libAudioStatistics.dylib'
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/libAudioStatistics.dylib
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
 exports:
-  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
-    symbols:         [ _CAReporterProxyKeyReporterID, _CAReporterProxyKeyServiceType, 
-                       _CAReportingApplicationName, _CAReportingAriadnePlistFilePath, 
-                       _CAReportingClientCopyConfiguration, _CAReportingClientCreateReporterID, 
-                       _CAReportingClientCreateReporterIDFromSessionID, _CAReportingClientCreateTestReporterID, 
-                       _CAReportingClientDestroyReporterID, _CAReportingClientGetAudioServiceType, 
-                       _CAReportingClientNameCoreAudio, _CAReportingClientSendMessage, 
-                       _CAReportingClientSendSingleMessage, _CAReportingClientSetAudioServiceType, 
-                       _CAReportingClientSetConfiguration, _CAReportingClientStartReporter, 
-                       _CAReportingClientStopReporter, _CAReportingDelayPerfEndSnapShot, 
-                       _CAReportingInternalEventEpochTime, _CAReportingInternalEventProcessUptimeMS, 
-                       _CAReportingInternalEventSystemUptimeSec, _CAReportingLogsDirectory, 
-                       _CAReportingPerfProcesses, _CAReportingPerfProjectName, _CAReportingRTCReportingTimeOut, 
-                       _CAReportingServiceNameAlarms, _CAReportingServiceNameAlerts, 
-                       _CAReportingServiceNameAudioDeviceUsage, _CAReportingServiceNameGeneric, 
-                       _CAReportingServiceNameHaptics, _CAReportingServiceNameLongFormAudio, 
-                       _CAReportingServiceNameNonLongFormAudio, _CAReportingServiceNameSiri, 
-                       _CAReportingServiceNameSoundAutoConfig, _CAReportingServiceNameStandAlone, 
-                       _CAReportingServiceNameTelephony, _CAReportingServiceNameTest, 
-                       _CAReportingServiceNameUnknown, _CAReportingSessionBlacklistFieldsKey, 
-                       _CAReportingSessionThrottleSecondsKey, _CAReportingTestName, 
-                       _CAReportingTraceType, _CAReportingTraceTypeArtrace, _CAReportingTraceTypeKtrace, 
-                       _CAReportingUtilityAllowSessionTransactions, _CAReportingUtilityExtractSessionIDFromReporterID, 
-                       _CAReportingUtilityGenerateServiceNameFromServiceType, _CAReportingUtilityGenerateServiceTypeFromServiceName, 
-                       _CAReportingUtilityIsInternalBuild, _CAReportingUtilityShouldSendMessage, 
-                       _CAReportingVersionNumber, _CreateSharedCAReportingClient ]
-    objc-classes:    [ CAReporter, CATestReporter ]
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CAReporterProxyKeyReporterID,
+                            _CAReporterProxyKeyServiceType,
+                            _CAReportingApplicationName,
+                            _CAReportingAriadnePlistFilePath,
+                            _CAReportingClientCopyConfiguration,
+                            _CAReportingClientCreateReporterID,
+                            _CAReportingClientCreateReporterIDFromSessionID,
+                            _CAReportingClientCreateTestReporterID,
+                            _CAReportingClientDestroyReporterID,
+                            _CAReportingClientGetAudioServiceType,
+                            _CAReportingClientNameCoreAudio,
+                            _CAReportingClientSendMessage,
+                            _CAReportingClientSendSingleMessage,
+                            _CAReportingClientSetAudioServiceType,
+                            _CAReportingClientSetConfiguration,
+                            _CAReportingClientStartReporter,
+                            _CAReportingClientStopReporter,
+                            _CAReportingDelayPerfEndSnapShot,
+                            _CAReportingInternalEventEpochTime,
+                            _CAReportingInternalEventProcessUptimeMS,
+                            _CAReportingInternalEventSystemUptimeSec,
+                            _CAReportingLogsDirectory, _CAReportingPerfProcesses,
+                            _CAReportingPerfProjectName,
+                            _CAReportingRTCReportingTimeOut,
+                            _CAReportingServiceNameAlarms,
+                            _CAReportingServiceNameAlerts,
+                            _CAReportingServiceNameAudioDeviceUsage,
+                            _CAReportingServiceNameGeneric,
+                            _CAReportingServiceNameHaptics,
+                            _CAReportingServiceNameLongFormAudio,
+                            _CAReportingServiceNameNonLongFormAudio,
+                            _CAReportingServiceNameSiri,
+                            _CAReportingServiceNameSoundAutoConfig,
+                            _CAReportingServiceNameStandAlone,
+                            _CAReportingServiceNameTelephony,
+                            _CAReportingServiceNameTest,
+                            _CAReportingServiceNameUnknown,
+                            _CAReportingSessionBlacklistFieldsKey,
+                            _CAReportingSessionThrottleSecondsKey,
+                            _CAReportingTestName, _CAReportingTraceType,
+                            _CAReportingTraceTypeArtrace,
+                            _CAReportingTraceTypeKtrace,
+                            _CAReportingUtilityAllowSessionTransactions,
+                            _CAReportingUtilityExtractSessionIDFromReporterID,
+                            _CAReportingUtilityGenerateServiceNameFromServiceType,
+                            _CAReportingUtilityGenerateServiceTypeFromServiceName,
+                            _CAReportingUtilityIsInternalBuild,
+                            _CAReportingUtilityShouldSendMessage,
+                            _CAReportingVersionNumber,
+                            _CreateSharedCAReportingClient ]
+    objc-classes:         [ CAReporter, CAReportingClient,
+                            CAReportingPerformanceObject,
+                            CAReportingPerformanceUtility, CATestReporter ]
+    objc-ivars:           [ CAReporter._configuration, CAReporter._connected,
+                            CAReporter._internalConfiguration,
+                            CAReporter._perfObject, CAReporter._removedByClient,
+                            CAReporter._reporterID, CAReporter._serviceType,
+                            CAReporter._signpostID, CAReporter._startDate,
+                            CAReporter._started,
+                            CAReportingClient._clientReporters,
+                            CAReportingClient._connection,
+                            CAReportingPerformanceObject._configuration,
+                            CAReportingPerformanceObject._perfDataName,
+                            CAReportingPerformanceObject._perfDataPath,
+                            CAReportingPerformanceObject._performanceMetrics,
+                            CAReportingPerformanceObject._processIdentifiers,
+                            CAReportingPerformanceObject._serviceType,
+                            CAReportingPerformanceObject._session ]
 ...
