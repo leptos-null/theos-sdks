@@ -64,6 +64,8 @@ jobs:
           DEVELOPER_DIR: /Applications/Xcode_14.3.1.app
           GH_TOKEN: ${{ github.token }}
         run: |
+          exit 0 # tmp
+          
           # iOS config
           XC_SDK_NAME="iphoneos"
           SDK_PREFIX="iPhoneOS"
@@ -82,7 +84,7 @@ jobs:
           PLATFORM_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-platform-path)"
           BASE_SDK_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-path)"
 
-          SDK_VERSION="${IPSW_VERSION}"
+          SDK_VERSION="${IPSW_VERSION}" # usually you want these to match, but sometimes they don't 
           SDK_OUTPUT_PATH="${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
