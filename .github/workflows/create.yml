@@ -10,6 +10,10 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      IPSW_DEVICE: "iPhone11,2" # supports iOS 12+
+      IPSW_VERSION: "16.4"
+
     steps:
       - name: Clone tools
         uses: actions/checkout@v4
@@ -28,21 +32,41 @@ jobs:
           cd tbd
           make bin/tbd
 
+      - name: IPSW cache
+        id: ipsw-cache
+        uses: actions/cache@v4
+        with:
+          path: ipsws/os.ipsw
+          key: ipsw-${{ env.IPSW_DEVICE }}-${{ env.IPSW_VERSION }}
+
       - name: Install blacktop/ipsw
+        if: steps.ipsw-cache.outputs.cache-hit != 'true'
         run: brew install blacktop/tap/ipsw
 
       - name: Install aria2
+        if: steps.ipsw-cache.outputs.cache-hit != 'true'
         run: brew install aria2
+
+      - name: Download IPSW
+        if: steps.ipsw-cache.outputs.cache-hit != 'true'
+        run: |
+          # `--dyld` is a convenient parameter for us, however it only supports iOS 16+
+          IPSW_DOWNLOAD_URL="$(ipsw download ipsw --urls --version "${IPSW_VERSION}" --device "${IPSW_DEVICE}")"
+          echo "Downloading ${IPSW_DOWNLOAD_URL}"
+          IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
+          aria2c --dir "${IPSW_DOWNLOAD_DIR}" "${IPSW_DOWNLOAD_URL}"
+
+          mkdir ipsws
+          mv "${IPSW_DOWNLOAD_DIR}"/*.ipsw "ipsws/os.ipsw" # cache path
 
       - name: Patch SDK
         env:
-          DEVELOPER_DIR: /Applications/Xcode_15.4.app
+          DEVELOPER_DIR: /Applications/Xcode_14.3.1.app
           GH_TOKEN: ${{ github.token }}
         run: |
           # iOS config
           XC_SDK_NAME="iphoneos"
           SDK_PREFIX="iPhoneOS"
-          IPSW_DEVICE="iPhone11,2" # supports iOS 12+
           DSC_BASENAME="dyld_shared_cache_arm64e"
 
           # tvOS config
@@ -58,18 +82,13 @@ jobs:
           PLATFORM_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-platform-path)"
           BASE_SDK_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-path)"
 
-          SDK_VERSION="17.5"
+          SDK_VERSION="${IPSW_VERSION}"
           SDK_OUTPUT_PATH="${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
-          IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
           IPSW_EXTRACTION_DIR="$(mktemp -d -t ipsw)"
 
-          # `--dyld` is a convenient parameter for us, however it only supports iOS 16+
-          IPSW_DOWNLOAD_URL="$(ipsw download ipsw --urls --version "${SDK_VERSION}" --device "${IPSW_DEVICE}")"
-
-          aria2c --dir "${IPSW_DOWNLOAD_DIR}" "${IPSW_DOWNLOAD_URL}"
-          unzip -d "${IPSW_EXTRACTION_DIR}" "${IPSW_DOWNLOAD_DIR}"/*.ipsw "*.dmg"
+          unzip -d "${IPSW_EXTRACTION_DIR}" "../ipsws/os.ipsw" "*.dmg"
 
           for DMG_FILE in "${IPSW_EXTRACTION_DIR}"/*.dmg; do
             # new mount root for each dmg so we don't have to
