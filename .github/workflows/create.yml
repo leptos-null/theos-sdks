@@ -64,8 +64,6 @@ jobs:
           DEVELOPER_DIR: /Applications/Xcode_14.3.1.app
           GH_TOKEN: ${{ github.token }}
         run: |
-          exit 0 # tmp
-          
           # iOS config
           XC_SDK_NAME="iphoneos"
           SDK_PREFIX="iPhoneOS"
@@ -84,7 +82,7 @@ jobs:
           PLATFORM_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-platform-path)"
           BASE_SDK_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-path)"
 
-          SDK_VERSION="${IPSW_VERSION}" # usually you want these to match, but sometimes they don't 
+          SDK_VERSION="${IPSW_VERSION}"
           SDK_OUTPUT_PATH="${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
@@ -96,7 +94,8 @@ jobs:
             # new mount root for each dmg so we don't have to
             # worry about how we iterate over the mount root
             DMG_MOUNT_ROOT="$(mktemp -d -t dmg)"
-            hdiutil attach "${DMG_FILE}" -mountroot "${DMG_MOUNT_ROOT}"
+            # some of the dmgs can't be mounted - not sure why
+            hdiutil attach "${DMG_FILE}" -mountroot "${DMG_MOUNT_ROOT}" || true
             for MOUNT_VOL in "${DMG_MOUNT_ROOT}"/*; do
               DYLD_CACHE_PATH="${MOUNT_VOL}/System/Library/Caches/com.apple.dyld/${DSC_BASENAME}"
               ls -alh "${DYLD_CACHE_PATH}" || true # debug
