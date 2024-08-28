@@ -58,7 +58,7 @@ jobs:
           PLATFORM_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-platform-path)"
           BASE_SDK_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-path)"
 
-          SDK_VERSION="14.5"
+          SDK_VERSION="17.5"
           SDK_OUTPUT_PATH="${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
