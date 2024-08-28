@@ -2,19 +2,31 @@ name: Create SDKs
 
 on: push
 
-permissions:
-  contents: write
-
 jobs:
   create:
     # https://github.com/actions/runner-images/blob/main/images/macos
-    runs-on: macos-11
+    runs-on: macos-14
+    # needed to be able to create a Release
+    permissions:
+      contents: write
 
     steps:
       - name: Clone tools
         uses: actions/checkout@v4
         with:
           sparse-checkout: "tools/"
+
+      - name: Clone tbd
+        uses: actions/checkout@v4
+        with:
+          repository: leptos-null/tbd
+          ref: f0ae164d76b7bb802bbdf8ef758cc5637fac0fa1 # pinned, leptos/source-platform
+          path: tbd
+
+      - name: Build tbd
+        run: |
+          cd tbd
+          make bin/tbd
 
       - name: Install blacktop/ipsw
         run: brew install blacktop/tap/ipsw
@@ -24,7 +36,7 @@ jobs:
 
       - name: Patch SDK
         env:
-          DEVELOPER_DIR: /Applications/Xcode_12.5.1.app
+          DEVELOPER_DIR: /Applications/Xcode_15.4.app
           GH_TOKEN: ${{ github.token }}
         run: |
           # iOS config
@@ -39,6 +51,9 @@ jobs:
           # IPSW_DEVICE="AppleTV5,3"
           # DSC_BASENAME="dyld_shared_cache_arm64"
 
+          # use pwd since we `cd` later
+          TBD_TOOL_PATH="$(pwd)/tbd/bin/tbd"
+
           cd tools/
           PLATFORM_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-platform-path)"
           BASE_SDK_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-path)"
@@ -49,10 +64,6 @@ jobs:
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
           IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
           IPSW_EXTRACTION_DIR="$(mktemp -d -t ipsw)"
-          TBD_TOOL_PATH="$(mktemp -t tbd)"
-
-          curl -L "https://github.com/inoahdev/tbd/releases/download/2.2/tbd-mac" -o "${TBD_TOOL_PATH}"
-          chmod 0755 "${TBD_TOOL_PATH}"
 
           # `--dyld` is a convenient parameter for us, however it only supports iOS 16+
           IPSW_DOWNLOAD_URL="$(ipsw download ipsw --urls --version "${SDK_VERSION}" --device "${IPSW_DEVICE}")"
@@ -91,5 +102,6 @@ jobs:
           tar -cJf "${SDK_OUTPUT_PATH}.tar.xz" "${SDK_OUTPUT_PATH}"
 
           RELEASE_TAG="auto-${GITHUB_SHA:0:7}"
-          gh release create "${RELEASE_TAG}" --draft --title "Draft ${SDK_PREFIX}${SDK_VERSION}.sdk"
-          gh release upload "${RELEASE_TAG}" "${SDK_OUTPUT_PATH}.tar.xz"
+          gh release create "${RELEASE_TAG}" --draft \
+            --title "Draft ${SDK_PREFIX}${SDK_VERSION}.sdk" \
+            "${SDK_OUTPUT_PATH}.tar.xz"
