@@ -44,38 +44,11 @@ jobs:
           cd tbd
           make bin/tbd
 
-      - name: Create cache key
-        id: cache-key
-        run: |
-          # replace ',' with '_', since ',' is not allowed in cache keys
-          echo "device-component=${IPSW_DEVICE//,/_}" >> "$GITHUB_OUTPUT"
-
-      - name: IPSW cache
-        id: ipsw-cache
-        uses: actions/cache@v4
-        with:
-          path: ipsws/os.ipsw
-          key: ipsw-${{ steps.cache-key.outputs.device-component }}-${{ env.IPSW_VERSION }}
-
       - name: Install blacktop/ipsw
-        if: steps.ipsw-cache.outputs.cache-hit != 'true'
         run: brew install blacktop/tap/ipsw
 
       - name: Install aria2
-        if: steps.ipsw-cache.outputs.cache-hit != 'true'
         run: brew install aria2
-
-      - name: Download IPSW
-        if: steps.ipsw-cache.outputs.cache-hit != 'true'
-        run: |
-          # `--dyld` is a convenient parameter for us, however it only supports iOS 16+
-          IPSW_DOWNLOAD_URL="$(ipsw download ipsw --urls --version "${IPSW_VERSION}" --device "${IPSW_DEVICE}")"
-          echo "Downloading ${IPSW_DOWNLOAD_URL}"
-          IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
-          aria2c --dir "${IPSW_DOWNLOAD_DIR}" "${IPSW_DOWNLOAD_URL}"
-
-          mkdir ipsws
-          mv "${IPSW_DOWNLOAD_DIR}"/*.ipsw "ipsws/os.ipsw" # cache path
 
       - name: Patch SDK
         env:
@@ -93,9 +66,16 @@ jobs:
           SDK_OUTPUT_PATH="${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
+          IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
           IPSW_EXTRACTION_DIR="$(mktemp -d -t ipsw)"
 
-          unzip -d "${IPSW_EXTRACTION_DIR}" "../ipsws/os.ipsw" "*.dmg"
+          # `--dyld` is a convenient parameter for us, however it only supports iOS 16+
+
+          IPSW_DOWNLOAD_URL="$(ipsw download ipsw --urls --version "${IPSW_VERSION}" --device "${IPSW_DEVICE}")"
+          echo "Downloading ${IPSW_DOWNLOAD_URL}"
+          aria2c --dir "${IPSW_DOWNLOAD_DIR}" "${IPSW_DOWNLOAD_URL}"
+
+          unzip -d "${IPSW_EXTRACTION_DIR}" "${IPSW_DOWNLOAD_DIR}"/*.ipsw "*.dmg"
 
           for DMG_FILE in "${IPSW_EXTRACTION_DIR}"/*.dmg; do
             # new mount root for each dmg so we don't have to
