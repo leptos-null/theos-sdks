@@ -11,8 +11,20 @@ jobs:
       contents: write
 
     env:
+      XCODE_VERSION: "14.3.1"
+      # iOS config
       IPSW_DEVICE: "iPhone11,2" # supports iOS 12+
       IPSW_VERSION: "16.4"
+      XC_SDK_NAME: "iphoneos"
+      SDK_PREFIX: "iPhoneOS"
+      DSC_BASENAME: "dyld_shared_cache_arm64e"
+
+      # tvOS config
+      # IPSW_DEVICE: "AppleTV5,3"
+      # IPSW_VERSION: "17.1"
+      # XC_SDK_NAME: "appletvos"
+      # SDK_PREFIX: "AppleTVOS"
+      # DSC_BASENAME: "dyld_shared_cache_arm64"
 
     steps:
       - name: Clone tools
@@ -32,12 +44,18 @@ jobs:
           cd tbd
           make bin/tbd
 
+      - name: Create cache key
+        id: cache-key
+        run: |
+          # replace ',' with '_', since ',' is not allowed in cache keys
+          echo "device-component=${IPSW_DEVICE//,/_}" >> "$GITHUB_OUTPUT"
+
       - name: IPSW cache
         id: ipsw-cache
         uses: actions/cache@v4
         with:
           path: ipsws/os.ipsw
-          key: ipsw-iPhone11_2-${{ env.IPSW_VERSION }}
+          key: ipsw-${{ steps.cache-key.outputs.device-component }}-${{ env.IPSW_VERSION }}
 
       - name: Install blacktop/ipsw
         if: steps.ipsw-cache.outputs.cache-hit != 'true'
@@ -61,21 +79,10 @@ jobs:
 
       - name: Patch SDK
         env:
-          DEVELOPER_DIR: /Applications/Xcode_14.3.1.app
+          DEVELOPER_DIR: /Applications/Xcode_${{ env.XCODE_VERSION }}.app
           GH_TOKEN: ${{ github.token }}
         run: |
-          # iOS config
-          XC_SDK_NAME="iphoneos"
-          SDK_PREFIX="iPhoneOS"
-          DSC_BASENAME="dyld_shared_cache_arm64e"
-
-          # tvOS config
-          # XC_SDK_NAME="appletvos"
-          # SDK_PREFIX="AppleTVOS"
-          # IPSW_DEVICE="AppleTV5,3"
-          # DSC_BASENAME="dyld_shared_cache_arm64"
-
-          # use pwd since we `cd` later
+          # use absolute path since we `cd` later
           TBD_TOOL_PATH="$(pwd)/tbd/bin/tbd"
 
           cd tools/
@@ -98,7 +105,6 @@ jobs:
             hdiutil attach "${DMG_FILE}" -mountroot "${DMG_MOUNT_ROOT}" || true
             for MOUNT_VOL in "${DMG_MOUNT_ROOT}"/*; do
               DYLD_CACHE_PATH="${MOUNT_VOL}/System/Library/Caches/com.apple.dyld/${DSC_BASENAME}"
-              ls -alh "${DYLD_CACHE_PATH}" || true # debug
               if [[ -e "${DYLD_CACHE_PATH}" ]]; then
                 break 2 # break out of DMG_FILE loop
               fi
@@ -108,10 +114,10 @@ jobs:
             done
           done
 
-          echo "DYLD_CACHE_PATH = ${DYLD_CACHE_PATH}" # debug
+          echo "Found dyld_shared_cache: ${DYLD_CACHE_PATH}"
 
           if [[ -z "${DYLD_CACHE_PATH}" ]]; then
-            echo "Failed to find ${DSC_BASENAME} in ${IPSW_DOWNLOAD_URL}"
+            echo "Failed to find ${DSC_BASENAME} in IPSW"
             exit 1
           fi
 
