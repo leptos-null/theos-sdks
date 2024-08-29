@@ -6,9 +6,9 @@ jobs:
   create:
     # https://github.com/actions/runner-images/blob/main/images/macos
     runs-on: macos-14
-    # needed to be able to create a Release
-    permissions:
-      contents: write
+    # needed to be able to push to the repo
+    # permissions:
+    #   contents: write
 
     env:
       XCODE_VERSION: "14.3.1"
@@ -51,26 +51,24 @@ jobs:
         run: brew install aria2
 
       - name: Patch SDK
+        id: patch-sdk
         env:
           DEVELOPER_DIR: /Applications/Xcode_${{ env.XCODE_VERSION }}.app
-          GH_TOKEN: ${{ github.token }}
         run: |
           # use absolute path since we `cd` later
           TBD_TOOL_PATH="$(pwd)/tbd/bin/tbd"
+          SDK_VERSION="${IPSW_VERSION}"
+          SDK_OUTPUT_PATH="$(pwd)/${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           cd tools/
           PLATFORM_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-platform-path)"
           BASE_SDK_PATH="$(xcrun --sdk "${XC_SDK_NAME}" --show-sdk-path)"
-
-          SDK_VERSION="${IPSW_VERSION}"
-          SDK_OUTPUT_PATH="${SDK_PREFIX}${SDK_VERSION}.sdk"
 
           SYMBOLS_DIR="$(mktemp -d -t symbols)"
           IPSW_DOWNLOAD_DIR="$(mktemp -d -t ipsw)"
           IPSW_EXTRACTION_DIR="$(mktemp -d -t ipsw)"
 
           # `--dyld` is a convenient parameter for us, however it only supports iOS 16+
-
           IPSW_DOWNLOAD_URL="$(ipsw download ipsw --urls --version "${IPSW_VERSION}" --device "${IPSW_DEVICE}")"
           echo "Downloading ${IPSW_DOWNLOAD_URL}"
           aria2c --dir "${IPSW_DOWNLOAD_DIR}" "${IPSW_DOWNLOAD_URL}"
@@ -105,9 +103,16 @@ jobs:
           ./dsc_extractor_client "${PLATFORM_PATH}/usr/lib/dsc_extractor.bundle" "${DYLD_CACHE_PATH}" "${SYMBOLS_DIR}"
           ./create_patched_sdk.sh "${SYMBOLS_DIR}" "${SDK_OUTPUT_PATH}" "${BASE_SDK_PATH}" "${TBD_TOOL_PATH}"
 
-          tar -cJf "${SDK_OUTPUT_PATH}.tar.xz" "${SDK_OUTPUT_PATH}"
+          echo "sdk-path=${SDK_OUTPUT_PATH}" >> "${GITHUB_OUTPUT}"
 
-          RELEASE_TAG="auto-${GITHUB_SHA:0:7}"
-          gh release create "${RELEASE_TAG}" --draft \
-            --title "Draft ${SDK_PREFIX}${SDK_VERSION}.sdk" \
-            "${SDK_OUTPUT_PATH}.tar.xz"
+      - name: Create branch
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+          git switch -c "bot/${SDK_PREFIX}${IPSW_VERSION}"
+          git add "${{ steps.patch-sdk.outputs.sdk-path }}"
+
+          git status # debug
+          git commit -m "Add ${SDK_PREFIX}${IPSW_VERSION}.sdk"
+          git push
