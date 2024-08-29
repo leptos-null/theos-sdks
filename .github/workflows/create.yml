@@ -27,10 +27,8 @@ jobs:
       # DSC_BASENAME: "dyld_shared_cache_arm64"
 
     steps:
-      - name: Clone tools
+      - name: Clone repo
         uses: actions/checkout@v4
-        with:
-          sparse-checkout: "tools/"
 
       - name: Clone tbd
         uses: actions/checkout@v4
