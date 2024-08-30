@@ -105,11 +105,16 @@ jobs:
 
       - name: Create branch
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          # thanks to https://github.com/actions/checkout/discussions/479
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
 
-          git switch -c "bot/${SDK_PREFIX}${IPSW_VERSION}"
-          git add "${{ steps.patch-sdk.outputs.sdk-path }}"
+          SDK_PATH="${{ steps.patch-sdk.outputs.sdk-path }}"
+          SDK_NAME="$(basename "${SDK_PATH%%.sdk}")"
+          BRANCH_NAME="bot/${SDK_NAME}"
 
-          git commit -m "Add ${SDK_PREFIX}${IPSW_VERSION}.sdk"
-          git push --set-upstream origin "bot/${SDK_PREFIX}${IPSW_VERSION}"
+          git switch -c "${BRANCH_NAME}"
+          git add "${SDK_PATH}"
+
+          git commit -m "Add ${SDK_NAME} SDK"
+          git push --set-upstream origin "${BRANCH_NAME}"
