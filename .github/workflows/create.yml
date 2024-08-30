@@ -111,6 +111,5 @@ jobs:
           git switch -c "bot/${SDK_PREFIX}${IPSW_VERSION}"
           git add "${{ steps.patch-sdk.outputs.sdk-path }}"
 
-          git status # debug
           git commit -m "Add ${SDK_PREFIX}${IPSW_VERSION}.sdk"
-          git push
+          git push --set-upstream origin "bot/${SDK_PREFIX}${IPSW_VERSION}"
